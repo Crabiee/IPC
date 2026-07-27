@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IPC Savipharm</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: Segoe UI, Tahoma, sans-serif; }
 :root { --bg: #0f172a; --panel: #1e293b; --border: #334155; --text: #e2e8f0; --muted: #94a3b8; --accent: #0ea5e9; }
@@ -180,7 +183,24 @@ body.light .sidebar,body.light .topbar,body.light .card,body.light .user-chip,bo
 
 
 /* ===== Excel question bank + mini game ===== */
-.content#page-tongquan{grid-template-columns:1fr}.calendar-wide,.game-card{grid-column:1/-1}.calendar-wide .calendar-widget{max-width:950px;margin:auto}.calendar-wide .calendar-day{min-height:50px}.shift-info{display:flex;gap:15px;align-items:center;background:rgba(0,0,0,.2);padding:12px 20px;border-radius:12px}.shift-info div{display:flex;flex-direction:column}.shift-info span{font-size:11px;color:#ffffffb5}.shift-info b{font-size:19px;margin-top:3px}.shift-info i{width:1px;height:32px;background:#ffffff33}.shift-info em{color:#38bdf8}.game-card{padding:24px}.game-top{display:flex;justify-content:space-between;gap:20px;align-items:center;padding-bottom:18px;border-bottom:1px solid var(--border)}.game-kicker{color:var(--accent);font-size:12px;font-weight:900}.game-top h2{font-size:24px;margin:5px 0}.game-top p{color:var(--muted);font-size:13px}.game-scoreboard{display:flex;gap:8px}.game-scoreboard div{min-width:82px;text-align:center;padding:10px;border-radius:11px;background:var(--panel-2);border:1px solid var(--border)}.game-scoreboard b{display:block;font-size:20px;color:var(--accent)}.game-scoreboard span{font-size:11px;color:var(--muted)}.bank-toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--border)}.bank-toolbar select,.secondary-btn,.file-btn{border:1px solid var(--border);background:var(--panel-2);color:var(--text);padding:10px 12px;border-radius:9px;font:inherit;font-size:13px}.file-btn,.secondary-btn{cursor:pointer;font-weight:700}.file-btn{background:#15803d;color:#fff;border-color:#15803d}.secondary-btn:hover,.file-btn:hover{transform:translateY(-1px)}#bankSummary{margin-left:auto;color:var(--muted);font-size:12px;font-weight:700}.import-report{padding:12px;border-radius:9px;margin-top:12px;background:var(--panel-2);border:1px solid var(--border);font-size:13px;line-height:1.6}.import-report.ok{border-color:#22c55e}.import-report.bad{border-color:#ef4444}.game-stage{min-height:340px;display:flex;align-items:center;justify-content:center;padding-top:22px}.game-start,.game-result{text-align:center;max-width:650px}.game-hero-icon,.result-medal{width:82px;height:82px;margin:0 auto 15px;border-radius:22px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0284c7,#4f46e5);color:#fff;font-size:36px}.game-start p,.game-result p{color:var(--muted);line-height:1.65}.game-btn{margin-top:16px}.game-question-wrap{width:100%;max-width:900px}.game-progress-bar{height:8px;background:var(--border);border-radius:99px;overflow:hidden}.game-progress-bar span{display:block;height:100%;background:linear-gradient(90deg,#0ea5e9,#6366f1);transition:.3s}.question-meta{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin:14px 0}.question-meta span:first-child{background:var(--accent-soft);color:var(--accent);padding:5px 10px;border-radius:99px}.game-question{font-size:20px;line-height:1.45;margin-bottom:16px}.game-answers{display:grid;grid-template-columns:1fr 1fr;gap:11px}.answer-btn{padding:14px;border-radius:11px;border:1px solid var(--border);background:var(--panel-2);color:var(--text);text-align:left;cursor:pointer;font:inherit}.answer-btn:hover:not(:disabled){border-color:var(--accent);background:var(--accent-soft)}.answer-btn.correct{border-color:#22c55e;background:#22c55e22;color:#22c55e}.answer-btn.wrong{border-color:#ef4444;background:#ef444422;color:#ef4444}.game-feedback{margin-top:14px;padding:12px;border-radius:9px;background:var(--panel-2);border:1px solid var(--border);line-height:1.55}.game-feedback.good{border-color:#22c55e}.game-feedback.bad{border-color:#ef4444}.next-btn{float:right}.result-score b{font-size:42px;color:var(--accent)}.result-score span{color:var(--muted);margin-left:6px}@media(max-width:850px){.game-top{flex-direction:column;align-items:flex-start}.game-scoreboard{width:100%}.game-scoreboard div{flex:1}.game-answers{grid-template-columns:1fr}#bankSummary{margin-left:0;width:100%}}@media(max-width:700px){.hero{flex-direction:column;align-items:flex-start;gap:16px}.shift-info{width:100%}.game-card{padding:16px}}
+.content#page-tongquan{grid-template-columns:1fr}.calendar-wide,.game-card{grid-column:1/-1}.calendar-wide .calendar-widget{max-width:950px;margin:auto}.calendar-wide .calendar-day{min-height:50px}/* --- hero illustration: cụm icon dược phẩm trôi nổi lấp khoảng trống --- */
+.hero-illustration{position:relative;flex:1;min-width:170px;max-width:280px;height:150px;margin:0 10px}
+.hero-orbit{position:absolute;top:50%;left:50%;width:150px;height:150px;transform:translate(-50%,-50%);opacity:.35;pointer-events:none}
+.orbit-ring{fill:none;stroke:var(--accent);stroke-width:1;stroke-dasharray:4 7;transform-origin:100px 100px;animation:orbitSpin 18s linear infinite}
+.orbit-ring-2{stroke:var(--accent-2);animation:orbitSpin 13s linear infinite reverse}
+@keyframes orbitSpin{to{transform:rotate(360deg)}}
+.hf{position:absolute;font-size:22px;color:var(--accent);opacity:.9;filter:drop-shadow(0 0 10px rgba(0,229,255,.45));animation:heroFloat 5.5s ease-in-out infinite}
+.hf-a{top:8%;left:18%;font-size:30px;animation-delay:0s;color:var(--accent)}
+.hf-b{top:52%;left:2%;font-size:24px;animation-delay:.6s;color:var(--accent-2)}
+.hf-c{top:70%;left:38%;font-size:22px;animation-delay:1.2s;color:var(--accent)}
+.hf-d{top:4%;left:58%;font-size:20px;animation-delay:1.8s;color:var(--accent-2)}
+.hf-e{top:38%;left:78%;font-size:26px;animation-delay:2.4s;color:#ff5b8c}
+.hf-f{top:74%;left:70%;font-size:20px;animation-delay:3s;color:var(--accent)}
+.hf-g{top:20%;left:38%;font-size:16px;animation-delay:3.6s;color:var(--accent-2)}
+.hf-h{top:58%;left:52%;font-size:18px;animation-delay:4.2s;color:var(--accent)}
+@keyframes heroFloat{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-14px) rotate(5deg)}}
+@media(max-width:960px){.hero-illustration{display:none}}
+.shift-info{display:flex;gap:15px;align-items:center;background:rgba(0,0,0,.2);padding:12px 20px;border-radius:12px}.shift-info div{display:flex;flex-direction:column}.shift-info span{font-size:11px;color:#ffffffb5}.shift-info b{font-size:19px;margin-top:3px}.shift-info i{width:1px;height:32px;background:#ffffff33}.shift-info em{color:#38bdf8}.game-card{padding:24px}.game-top{display:flex;justify-content:space-between;gap:20px;align-items:center;padding-bottom:18px;border-bottom:1px solid var(--border)}.game-kicker{color:var(--accent);font-size:12px;font-weight:900}.game-top h2{font-size:24px;margin:5px 0}.game-top p{color:var(--muted);font-size:13px}.game-scoreboard{display:flex;gap:8px}.game-scoreboard div{min-width:82px;text-align:center;padding:10px;border-radius:11px;background:var(--panel-2);border:1px solid var(--border)}.game-scoreboard b{display:block;font-size:20px;color:var(--accent)}.game-scoreboard span{font-size:11px;color:var(--muted)}.stop-game-btn{align-self:center;border:1px solid #ef4444;background:transparent;color:#ef4444;padding:10px 14px;border-radius:11px;font:inherit;font-size:13px;font-weight:800;cursor:pointer;transition:.2s;display:flex;align-items:center;gap:6px}.stop-game-btn:hover{background:#ef4444;color:#fff;transform:translateY(-1px)}.bank-toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--border)}.bank-toolbar select,.secondary-btn,.file-btn{border:1px solid var(--border);background:var(--panel-2);color:var(--text);padding:10px 12px;border-radius:9px;font:inherit;font-size:13px}.file-btn,.secondary-btn{cursor:pointer;font-weight:700}.file-btn{background:#15803d;color:#fff;border-color:#15803d}.secondary-btn:hover,.file-btn:hover{transform:translateY(-1px)}#bankSummary{margin-left:auto;color:var(--muted);font-size:12px;font-weight:700}.import-report{padding:12px;border-radius:9px;margin-top:12px;background:var(--panel-2);border:1px solid var(--border);font-size:13px;line-height:1.6}.import-report.ok{border-color:#22c55e}.import-report.bad{border-color:#ef4444}.game-stage{min-height:340px;display:flex;align-items:center;justify-content:center;padding-top:22px}.game-start,.game-result{text-align:center;max-width:650px}.game-hero-icon,.result-medal{width:82px;height:82px;margin:0 auto 15px;border-radius:22px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0284c7,#4f46e5);color:#fff;font-size:36px}.game-start p,.game-result p{color:var(--muted);line-height:1.65}.game-btn{margin-top:16px}.game-question-wrap{width:100%;max-width:900px}.game-progress-bar{height:8px;background:var(--border);border-radius:99px;overflow:hidden}.game-progress-bar span{display:block;height:100%;background:linear-gradient(90deg,#0ea5e9,#6366f1);transition:.3s}.question-meta{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin:14px 0}.question-meta span:first-child{background:var(--accent-soft);color:var(--accent);padding:5px 10px;border-radius:99px}.game-question{font-size:20px;line-height:1.45;margin-bottom:16px}.game-answers{display:grid;grid-template-columns:1fr 1fr;gap:11px}.answer-btn{padding:14px;border-radius:11px;border:1px solid var(--border);background:var(--panel-2);color:var(--text);text-align:left;cursor:pointer;font:inherit}.answer-btn:hover:not(:disabled){border-color:var(--accent);background:var(--accent-soft)}.answer-btn.correct{border-color:#22c55e;background:#22c55e22;color:#22c55e}.answer-btn.wrong{border-color:#ef4444;background:#ef444422;color:#ef4444}.game-feedback{margin-top:14px;padding:12px;border-radius:9px;background:var(--panel-2);border:1px solid var(--border);line-height:1.55}.game-feedback.good{border-color:#22c55e}.game-feedback.bad{border-color:#ef4444}.next-btn{float:right}.result-score b{font-size:42px;color:var(--accent)}.result-score span{color:var(--muted);margin-left:6px}@media(max-width:850px){.game-top{flex-direction:column;align-items:flex-start}.game-scoreboard{width:100%}.game-scoreboard div{flex:1}.game-answers{grid-template-columns:1fr}#bankSummary{margin-left:0;width:100%}}@media(max-width:700px){.hero{flex-direction:column;align-items:flex-start;gap:16px}.shift-info{width:100%}.game-card{padding:16px}}
 
 /* Khôi phục đầy đủ khu vực Truy cập nhanh */
 .quick-access-card{grid-column:1/-1}
@@ -237,6 +257,15 @@ body.light .sidebar,body.light .topbar,body.light .card,body.light .user-chip,bo
 .calendar-compact .calendar-day{min-height:32px;border-radius:8px;font-size:12px}
 .calendar-compact .calendar-weekdays,.calendar-compact .calendar-days{gap:4px}
 .calendar-compact .calendar-nav{width:31px;height:31px}
+.calendar-day.sat-off{background:rgba(239,68,68,.12)!important;border-color:rgba(239,68,68,.4)!important;color:#f87171!important}
+.calendar-day.sat-work{background:rgba(34,197,94,.12)!important;border-color:rgba(34,197,94,.42)!important;color:#4ade80!important}
+.calendar-day.sat-off.today,.calendar-day.sat-work.today{color:#fff!important}
+.calendar-day.sat-off.muted,.calendar-day.sat-work.muted{opacity:.4}
+.calendar-legend{display:flex;gap:16px;flex-wrap:wrap;font-size:11px;color:var(--muted);font-weight:700;padding-top:2px}
+.calendar-legend span{display:flex;align-items:center;gap:6px}
+.calendar-legend i{width:9px;height:9px;border-radius:3px;display:inline-block}
+.calendar-legend .lg-work{background:#22c55e}
+.calendar-legend .lg-off{background:#ef4444}
 .favorite-contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .favorite-contact{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px;border:1px solid var(--border);border-radius:11px;background:var(--panel-2);color:var(--text);cursor:pointer;text-align:left;font:inherit;transition:.2s}
 .favorite-contact:hover{border-color:var(--accent);background:var(--accent-soft);transform:translateY(-2px)}
@@ -258,7 +287,453 @@ body.light .sidebar,body.light .topbar,body.light .card,body.light .user-chip,bo
 .favorite-contact strong{order:1;min-width:72px;padding:10px 12px;font-size:24px;line-height:1;font-weight:900;letter-spacing:1px;box-shadow:0 6px 14px rgba(37,99,235,.20)}
 .favorite-contact span{order:2;flex:1}.favorite-contact span i{font-size:16px}.favorite-contact b{font-size:13px;line-height:1.35}
 
+
+/* ================================================================
+   TECH REDESIGN — dark / bold / motion / scroll-reveal
+   (lấy cảm hứng từ ngôn ngữ thiết kế của gsap.com)
+   ================================================================ */
+:root{
+  --bg:#05070c;--panel:#0b0f1a;--panel-2:#0e1422;--border:#1c2436;
+  --text:#e8edf7;--text-strong:#ffffff;--muted:#8b96ab;--muted-2:#6b7690;
+  --accent:#00e5ff;--accent-2:#a742ff;--accent-soft:rgba(0,229,255,.12);
+  --input-bg:#080b13;--input-text:#e8edf7;--input-placeholder:#5b6478;
+  --shadow:0 24px 60px rgba(0,0,0,.55);--focus:0 0 0 3px rgba(0,229,255,.28);
+  --glow:0 0 0 1px rgba(0,229,255,.20),0 0 34px rgba(0,229,255,.12);
+}
+body.light{
+  --bg:#eef1f7;--panel:#ffffff;--panel-2:#f4f6fb;--border:#d7deea;
+  --text:#0b1220;--text-strong:#000000;--muted:#54607a;--muted-2:#374156;
+  --accent:#0891b2;--accent-2:#7c3aed;--accent-soft:rgba(8,145,178,.10);
+  --input-bg:#ffffff;--input-text:#0b1220;--input-placeholder:#7a86a0;
+  --shadow:0 18px 40px rgba(15,23,42,.14);--focus:0 0 0 3px rgba(8,145,178,.22);
+  --glow:0 0 0 1px rgba(8,145,178,.16),0 0 26px rgba(8,145,178,.10);
+}
+html{scroll-behavior:smooth}
+body,button,input,select,textarea{font-family:'Space Grotesk','Segoe UI',sans-serif}
+.game-kicker,.tools-kicker,.directory-kicker,.question-meta span,.hero small,#bankSummary,.tech-ticker span,.tech-label{
+  font-family:'JetBrains Mono',monospace!important;text-transform:uppercase;letter-spacing:.10em;
+}
+
+/* --- deep tech backdrop: grid + glow, replaces soft gradient drift --- */
+body{
+  background:
+    radial-gradient(ellipse 900px 520px at 12% -8%,rgba(0,229,255,.16),transparent 60%),
+    radial-gradient(ellipse 820px 520px at 108% 8%,rgba(167,66,255,.16),transparent 60%),
+    linear-gradient(180deg,#05070c 0%,#080b14 100%)!important;
+  background-size:cover!important;animation:none!important;
+}
+body.light{
+  background:
+    radial-gradient(ellipse 900px 520px at 12% -8%,rgba(8,145,178,.09),transparent 60%),
+    radial-gradient(ellipse 820px 520px at 108% 8%,rgba(124,58,237,.08),transparent 60%),
+    linear-gradient(180deg,#eef1f7 0%,#e7ecf5 100%)!important;
+}
+body::before{
+  background-image:linear-gradient(rgba(0,229,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(0,229,255,.07) 1px,transparent 1px)!important;
+  background-size:44px 44px!important;
+  mask-image:radial-gradient(ellipse 85% 60% at 50% 0%,#000 40%,transparent 92%)!important;
+  animation:gridFloatTech 42s linear infinite!important;
+}
+body.light::before{background-image:linear-gradient(rgba(8,145,178,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(8,145,178,.07) 1px,transparent 1px)!important}
+@keyframes gridFloatTech{from{background-position:0 0,0 0}to{background-position:44px 44px,44px 44px}}
+/* cursor-follow spotlight — updated via JS custom properties */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:2;background:radial-gradient(460px circle at var(--mx,50%) var(--my,10%),rgba(0,229,255,.07),transparent 70%)}
+
+/* --- sidebar / nav: mono labels, glowing active state --- */
+.sidebar{position:relative}
+.sidebar::after{content:"";position:absolute;top:0;right:-1px;width:1px;height:100%;background:linear-gradient(180deg,transparent,rgba(0,229,255,.45),transparent)}
+.brand-text h3{font-family:'JetBrains Mono',monospace;letter-spacing:.03em;font-size:15px;font-weight:800}
+.nav{padding-top:18px}
+.nav a{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.04em;text-transform:uppercase;border-radius:8px;transition:.2s ease}
+.nav a:hover{transform:translateX(4px)}
+.nav a.active{background:var(--accent-soft)!important;box-shadow:inset 3px 0 0 var(--accent),var(--glow)}
+.submenu a{text-transform:none;letter-spacing:0;font-family:'Space Grotesk',sans-serif}
+
+/* --- status ticker strip under topbar --- */
+.tech-ticker{overflow:hidden;white-space:nowrap;border-bottom:1px solid var(--border);background:var(--panel);position:sticky;top:64px;z-index:4}
+.tech-ticker span{display:inline-block;padding-left:100%;font-size:11px;color:var(--accent);animation:tickerScroll 28s linear infinite}
+.tech-ticker span b{color:var(--text-strong);margin:0 6px}
+@keyframes tickerScroll{0%{transform:translate(0,0)}100%{transform:translate(-100%,0)}}
+@media(prefers-reduced-motion:reduce){.tech-ticker span{animation:none;padding-left:16px}}
+
+/* --- hero: bold gradient headline + tech grid glow --- */
+.hero{border-radius:18px!important;background:linear-gradient(155deg,#070b16 0%,#0b1020 46%,#150a26 100%)!important;border:1px solid rgba(0,229,255,.28)!important;box-shadow:var(--glow),0 30px 70px rgba(0,0,0,.5)!important}
+.hero::before{background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px)!important;background-size:26px 26px!important}
+.hero h1{font-weight:800!important;letter-spacing:-.01em;background:linear-gradient(90deg,#fff 15%,var(--accent) 55%,var(--accent-2) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;background-size:220% auto;animation:heroShine 7s linear infinite;text-shadow:none!important}
+@keyframes heroShine{to{background-position:220% center}}
+.hero small{color:var(--accent)!important;font-weight:800!important}
+.hero .stat{border-radius:12px!important;border:1px solid rgba(0,229,255,.30)!important;background:rgba(255,255,255,.04)!important;backdrop-filter:blur(6px)}
+.hero .stat b{font-family:'JetBrains Mono',monospace;font-size:23px!important}
+.shift-info{border:1px solid rgba(0,229,255,.22);background:rgba(255,255,255,.03)!important}
+
+/* --- cards: sharp accent bar reveal on hover + lift --- */
+.card{border-radius:14px!important;position:relative;overflow:hidden;transition:transform .3s cubic-bezier(.16,.84,.44,1),box-shadow .3s ease}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-2));transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.16,.84,.44,1);z-index:2}
+.card:hover::before{transform:scaleX(1)}
+.card:hover{transform:translateY(-5px);box-shadow:var(--glow),0 28px 54px rgba(0,0,0,.42)}
+.card-header h3{font-weight:800!important;letter-spacing:-.01em}
+.stat-row b{font-family:'JetBrains Mono',monospace;font-size:23px!important;background:linear-gradient(90deg,var(--text-strong),var(--accent));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat-row .icon{border-radius:10px!important}
+
+/* --- buttons: bold, sharp, sweep-on-hover --- */
+.btn-primary,.file-btn{border-radius:10px!important;font-weight:800!important;text-transform:uppercase;letter-spacing:.03em;font-size:13px!important;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--accent),var(--accent-2))!important;box-shadow:0 0 0 1px rgba(0,229,255,.32),0 14px 30px rgba(0,229,255,.18)!important}
+.file-btn{background:linear-gradient(135deg,#059669,var(--accent))!important;border-color:transparent!important}
+.btn-primary::after,.file-btn::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent,rgba(255,255,255,.35),transparent);transform:translateX(-130%) skewX(-12deg);transition:transform .55s ease}
+.btn-primary:hover::after,.file-btn:hover::after{transform:translateX(130%) skewX(-12deg)}
+.secondary-btn{border-radius:10px!important;font-weight:700!important;text-transform:uppercase;letter-spacing:.02em;font-size:12px!important}
+.stop-game-btn{text-transform:uppercase;letter-spacing:.03em;font-family:'JetBrains Mono',monospace}
+.calendar-nav,.tool-fullscreen-btn,.directory-fullscreen-btn{border-radius:9px!important}
+
+/* --- apps grid --- */
+.app-icon{border-radius:14px!important;box-shadow:0 10px 24px rgba(0,0,0,.4)}
+.app small{letter-spacing:.01em}
+
+/* --- game card accent --- */
+.game-hero-icon,.result-medal{border-radius:20px!important;background:linear-gradient(135deg,var(--accent),var(--accent-2))!important;box-shadow:0 0 0 1px rgba(0,229,255,.3),0 18px 34px rgba(0,229,255,.18)}
+.game-progress-bar span{background:linear-gradient(90deg,var(--accent),var(--accent-2))!important}
+.answer-btn{border-radius:11px!important;transition:.2s ease}
+.answer-btn:hover:not(:disabled){transform:translateY(-2px)}
+
+/* --- scrollbar glow --- */
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--accent),var(--accent-2))!important}
+
+/* --- scroll reveal (toggled by IntersectionObserver in JS) --- */
+.reveal{opacity:0;transform:translateY(30px)}
+.reveal.in-view{opacity:1;transform:translateY(0);transition:opacity .75s cubic-bezier(.16,.84,.44,1),transform .75s cubic-bezier(.16,.84,.44,1)}
+.reveal-stagger.in-view{transition-delay:calc(var(--stagger,0) * 70ms)}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important}html{scroll-behavior:auto}}
+
 </style>
+
+<!-- ===== ANIME / COMICS VISUAL OVERRIDE: presentation only, no functional code changed ===== -->
+<style id="animeComicsTheme">
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Nunito:wght@600;700;800;900&display=swap');
+@media screen {
+:root{
+ --bg:#fffdf3;--panel:#ffffff;--panel-2:#fff8dc;--border:#111111;
+ --text:#171717;--text-strong:#050505;--muted:#554f46;--muted-2:#6b6257;
+ --accent:#ef3f83;--accent-2:#7b3ff2;--accent-soft:#ffe5f0;
+ --input-bg:#fffdf7;--input-text:#111;--input-placeholder:#81766b;
+ --shadow:7px 8px 0 #111;--focus:0 0 0 4px #ffe45c;
+ --comic-yellow:#ffe45c;--comic-pink:#ef3f83;--comic-cyan:#7de7ee;--comic-mint:#c8f3df;--comic-lilac:#ead8ff;
+}
+body.light{--bg:#fffdf3;--panel:#fff;--panel-2:#fff8dc;--border:#111;--text:#171717;--text-strong:#050505;--muted:#554f46;--accent:#ef3f83;--accent-2:#7b3ff2;--accent-soft:#ffe5f0;--input-bg:#fffdf7;--input-text:#111;--shadow:7px 8px 0 #111;--focus:0 0 0 4px #ffe45c}
+*{scrollbar-color:#ef3f83 #fff5c7}
+body,button,input,select,textarea{font-family:'Nunito','Comic Sans MS',sans-serif!important}
+body,body.light{background-color:#fffdf3!important;background-image:radial-gradient(#171717 1.25px,transparent 1.25px)!important;background-size:18px 18px!important;animation:none!important;color:var(--text)!important}
+body::before{content:""!important;position:fixed!important;inset:0!important;pointer-events:none!important;background:linear-gradient(135deg,rgba(255,228,92,.14),transparent 38%,rgba(239,63,131,.08))!important;mask-image:none!important;animation:none!important}
+body::after{display:none!important}.pharma-bg{opacity:.13!important}.pharma-bg i{color:#111!important}
+.sidebar,.topbar,.card,.user-chip,.notif-dropdown,.chat-popup,.search-modal{background:var(--panel)!important;color:var(--text)!important;border:3px solid #111!important;box-shadow:var(--shadow)!important;backdrop-filter:none!important}
+.sidebar{border-width:0 3px 0 0!important;background:#fff8dc!important}.sidebar::after{display:none!important}.topbar{border-width:0 0 3px 0!important;background:#ffe45c!important;box-shadow:0 5px 0 #111!important}
+.brand{background:#ffe45c;border-bottom:3px solid #111!important}.brand-logo.modern-logo{background:#ef3f83!important;border:3px solid #111!important;border-radius:50%!important;box-shadow:4px 4px 0 #111!important;transform:rotate(-4deg)}
+.brand-logo.modern-logo::before{background:#7de7ee!important}.brand-text h3,.hero h1,.card-header h3,.game-top h2,.ipc-tools-header h2,.directory-portal-header h2,.calendar-title{font-family:'Bangers','Impact',sans-serif!important;letter-spacing:1.2px!important;color:#111!important;text-transform:uppercase}.brand-text h3{font-size:19px!important}.brand-text small,.user-info small,.news-meta,.search-hint{color:#4d463f!important}
+.nav a{font-family:'Comic Neue','Nunito',sans-serif!important;font-size:14px!important;font-weight:900!important;text-transform:none!important;color:#171717!important;border:2px solid transparent!important;border-radius:11px!important}.nav a:hover{transform:translateX(5px) rotate(-1deg)!important}.nav a:hover,.nav a.active{background:#7de7ee!important;color:#111!important;border-color:#111!important;box-shadow:3px 3px 0 #111!important}.nav a.active{box-shadow:4px 4px 0 #111!important}.portal-credit{border-top:3px solid #111!important;background:#c8f3df}.portal-credit b{color:#111!important}
+.tech-ticker{background:#111!important;border-bottom:3px solid #111!important}.tech-ticker span{color:#ffe45c!important;font-family:'Comic Neue',sans-serif!important;font-weight:900}.tech-ticker span b{color:#ef3f83!important}
+.content{gap:24px!important}.hero{background:#ffe45c!important;border:3px solid #111!important;border-radius:20px!important;box-shadow:9px 10px 0 #111!important;color:#111!important;overflow:visible!important}.hero::before{background-image:radial-gradient(#111 1px,transparent 1px)!important;background-size:14px 14px!important;opacity:.13!important}.hero::after{content:"POW!"!important;display:flex!important;align-items:center!important;justify-content:center!important;width:96px!important;height:96px!important;right:24px!important;top:-24px!important;background:#ef3f83!important;border:3px solid #111!important;border-radius:50%!important;color:#fff!important;font-family:'Bangers',sans-serif!important;font-size:26px!important;box-shadow:5px 5px 0 #111!important;animation:none!important;transform:rotate(8deg)}
+.hero h1{font-size:34px!important;-webkit-text-fill-color:#111!important;background:none!important;text-shadow:3px 3px 0 #fff!important;animation:none!important}.hero small{color:#111!important;font-family:'Comic Neue',sans-serif!important;font-weight:900!important}.hero .stat,.shift-info{background:#fff!important;border:3px solid #111!important;color:#111!important;box-shadow:4px 4px 0 #111!important;border-radius:13px!important}.hero .stat b,.hero .stat span,.shift-info span,.shift-info b{color:#111!important;text-shadow:none!important}.shift-info em{color:#ef3f83!important}
+.card{border:3px solid #111!important;border-radius:18px!important;box-shadow:var(--shadow)!important;overflow:visible!important;animation:none!important;transition:.2s ease!important}.card::before{display:none!important}.card:hover{transform:translateY(-4px) rotate(-.15deg)!important;box-shadow:10px 12px 0 #111!important}.card:nth-of-type(4n+1){background:#fff!important}.card:nth-of-type(4n+2){background:#f4ecff!important}.card:nth-of-type(4n+3){background:#edfcfd!important}.card:nth-of-type(4n){background:#fff9d8!important}.card-header{border-bottom:3px solid #111;padding-bottom:12px}.card-header h3{font-size:20px!important}.card-header h3 i{color:#ef3f83!important}.card-header a{background:#ffe45c!important;color:#111!important;border:2px solid #111;padding:5px 10px;border-radius:8px;box-shadow:2px 2px 0 #111}
+.app{border:2px solid transparent!important;border-radius:14px!important}.app:hover{background:#fff2a8!important;border-color:#111!important;box-shadow:4px 4px 0 #111!important;transform:translateY(-4px) rotate(-1deg)!important}.app-icon{border:3px solid #111!important;border-radius:15px!important;box-shadow:4px 4px 0 #111!important}.app small{color:#111!important;font-family:'Comic Neue',sans-serif!important;font-weight:900!important}
+.calendar-day,.favorite-contact,.game-scoreboard div,.answer-btn,.news-manage-item{border:2px solid #111!important;background:#fff!important;color:#111!important;box-shadow:2px 2px 0 #111!important}.calendar-day.today{background:#ef3f83!important;color:#fff!important;box-shadow:3px 3px 0 #111!important}.calendar-day.sat-work{background:#c8f3df!important;color:#116044!important}.calendar-day.sat-off{background:#ffd9e5!important;color:#a11248!important}.favorite-contact strong{background:#7de7ee!important;color:#111!important;border:2px solid #111!important;box-shadow:3px 3px 0 #111!important}.favorite-contact span i{color:#ef3f83!important}
+.game-kicker,.tools-kicker,.directory-kicker,.question-meta span,#bankSummary,.tech-label{font-family:'Comic Neue',sans-serif!important;letter-spacing:.04em!important;color:#7b3ff2!important}.game-hero-icon,.result-medal{background:#ef3f83!important;border:3px solid #111!important;box-shadow:5px 5px 0 #111!important}.game-progress-bar{border:2px solid #111!important;background:#fff!important}.game-progress-bar span{background:#ffe45c!important}.answer-btn:hover:not(:disabled){background:#fff2a8!important}.answer-btn.correct{background:#c8f3df!important;color:#075b3b!important}.answer-btn.wrong{background:#ffd9e5!important;color:#9f1239!important}
+.btn-primary,.file-btn,.secondary-btn,.stop-game-btn,.tool-fullscreen-btn,.directory-fullscreen-btn,.ipc-tool-tab,.calendar-nav{font-family:'Comic Neue',sans-serif!important;font-weight:900!important;border:3px solid #111!important;border-radius:10px!important;box-shadow:4px 4px 0 #111!important;text-transform:none!important}.btn-primary,.file-btn{background:#ef3f83!important;color:#fff!important}.secondary-btn,.tool-fullscreen-btn,.directory-fullscreen-btn,.calendar-nav{background:#ffe45c!important;color:#111!important}.ipc-tool-tab{background:#fff!important;color:#111!important}.ipc-tool-tab.active{background:#7de7ee!important;color:#111!important}.btn-primary:hover,.file-btn:hover,.secondary-btn:hover,.ipc-tool-tab:hover{transform:translate(-1px,-2px)!important;box-shadow:6px 6px 0 #111!important}.btn-primary::after,.file-btn::after{display:none!important}
+.form-group input,.form-group select,.form-group textarea,.chat-input input,.search-modal input,.bank-toolbar select{border:2px solid #111!important;background:#fff!important;color:#111!important;border-radius:10px!important;box-shadow:2px 2px 0 #111!important}.form-group input:focus,.form-group select:focus,.form-group textarea:focus{box-shadow:0 0 0 4px #ffe45c,3px 3px 0 #111!important}
+.ipc-tools-header,.directory-portal-header{background:#ffe45c!important;border-bottom:3px solid #111!important}.ipc-tool-tabs{background:#fff8dc!important;border-bottom:3px solid #111!important}.ipc-tools-shell,.directory-shell{overflow:hidden!important}.ipc-tool-frame-wrap,.directory-frame-wrap{background:#fffdf3!important}
+.news-tag{background:#ef3f83!important;border:2px solid #111!important;color:#fff!important}.news-tag.blue{background:#7b3ff2!important}.badge{border:2px solid #111!important}.fab{background:#ef3f83!important;border:3px solid #111!important;box-shadow:5px 5px 0 #111!important}
+::-webkit-scrollbar-thumb{background:#ef3f83!important;border:2px solid #111!important}::-webkit-scrollbar-track{background:#fff5c7!important}
+.reveal{opacity:1!important;transform:none!important}.reveal.in-view{transition:none!important}
+@media(max-width:700px){.hero h1{font-size:27px!important}.hero::after{width:66px!important;height:66px!important;font-size:19px!important;right:12px!important}.card{box-shadow:5px 6px 0 #111!important}}
+}
+</style>
+
+<!-- ===== ANIME COMICS V3: manga Vietnamese typography, neutral dark, mobile-first ===== -->
+<style id="animeComicsThemeV3">
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Mali:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap&subset=vietnamese');
+@media screen {
+/* Manga-like Vietnamese fonts */
+html,body,button,input,select,textarea{font-family:'Mali','Segoe UI',Arial,sans-serif!important;font-synthesis:none!important;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+body{font-weight:600!important}.nav a,.submenu a,.app small,.favorite-contact b,.game-top p,.news-body,.form-group label,.tech-ticker span,.portal-credit,.user-info small{font-family:'Mali','Segoe UI',sans-serif!important;font-weight:600!important;letter-spacing:0!important}
+.brand-text h3,.hero h1,.card-header h3,.game-top h2,.ipc-tools-header h2,.directory-portal-header h2,.calendar-title,.game-question,.game-start h3,.game-result h3,.tools-kicker,.directory-kicker,.game-kicker{font-family:'Coiny','Mali',sans-serif!important;font-weight:400!important;letter-spacing:0!important;line-height:1.35!important;text-transform:none!important;overflow-wrap:anywhere}
+
+/* Dark mode: neutral ink black, graphite and deep red. No purple, navy-purple or pastel. */
+body:not(.light){
+ --bg:#111210;--panel:#1d1f1b;--panel-2:#272a24;--border:#b8b3a5;--text:#f1eee4;--text-strong:#fffdf5;--muted:#c7c2b4;--muted-2:#a8a396;
+ --accent:#e04b32;--accent-2:#d59a18;--accent-soft:#3a2a20;--input-bg:#151713;--input-text:#f4f0e7;--input-placeholder:#aaa496;
+ --shadow:7px 8px 0 #070806;--focus:0 0 0 4px rgba(213,154,24,.32);color-scheme:dark;
+ background-color:#111210!important;background-image:radial-gradient(rgba(235,228,207,.11) 1px,transparent 1px),linear-gradient(145deg,#111210,#181a16)!important;background-size:20px 20px,100% 100%!important;
+}
+body:not(.light)::before{background:radial-gradient(circle at 16% 4%,rgba(213,154,24,.08),transparent 28%),radial-gradient(circle at 88% 18%,rgba(224,75,50,.07),transparent 25%)!important}
+body:not(.light) .sidebar,body:not(.light) .card,body:not(.light) .user-chip,body:not(.light) .notif-dropdown,body:not(.light) .chat-popup,body:not(.light) .search-modal{background:#1d1f1b!important;color:#f1eee4!important;border-color:#8d897d!important;box-shadow:7px 8px 0 #070806!important}
+body:not(.light) .sidebar{background:#191b17!important}body:not(.light) .topbar,body:not(.light) .brand{background:#282a23!important;border-color:#8d897d!important;box-shadow:0 5px 0 #070806!important}
+body:not(.light) .brand-text h3,body:not(.light) .card-header h3,body:not(.light) .calendar-title,body:not(.light) .game-top h2,body:not(.light) .ipc-tools-header h2,body:not(.light) .directory-portal-header h2{color:#fffdf5!important}
+body:not(.light) .brand-text small,body:not(.light) .user-info small,body:not(.light) .portal-credit,body:not(.light) .news-meta,body:not(.light) .game-top p{color:#c7c2b4!important}
+body:not(.light) .nav a{color:#eeeade!important}body:not(.light) .nav a:hover,body:not(.light) .nav a.active{background:#3b3528!important;color:#fffdf5!important;border-color:#d59a18!important;box-shadow:4px 4px 0 #070806!important}
+body:not(.light) .hero{background:linear-gradient(135deg,#292b24,#34291f)!important;border-color:#a69e88!important;box-shadow:9px 10px 0 #070806!important}body:not(.light) .hero h1,body:not(.light) .hero small{color:#fffdf5!important;-webkit-text-fill-color:#fffdf5!important;text-shadow:3px 3px 0 #070806!important}
+body:not(.light) .hero .stat,body:not(.light) .shift-info{background:#20221d!important;color:#f1eee4!important;border-color:#8d897d!important;box-shadow:4px 4px 0 #070806!important}body:not(.light) .hero .stat b,body:not(.light) .hero .stat span,body:not(.light) .shift-info span,body:not(.light) .shift-info b{color:#f1eee4!important}
+body:not(.light) .card-header{border-color:#8d897d!important}body:not(.light) .card-header a{background:#3b3528!important;color:#fffdf5!important;border-color:#d59a18!important;box-shadow:2px 2px 0 #070806!important}
+body:not(.light) .app:hover{background:#302d25!important;border-color:#d59a18!important;box-shadow:4px 4px 0 #070806!important}body:not(.light) .app small{color:#f1eee4!important}
+body:not(.light) .calendar-day,body:not(.light) .favorite-contact,body:not(.light) .game-scoreboard div,body:not(.light) .answer-btn,body:not(.light) .news-manage-item{background:#272a24!important;color:#f1eee4!important;border-color:#8d897d!important;box-shadow:2px 2px 0 #070806!important}
+body:not(.light) .favorite-contact:hover{background:#302f28!important}body:not(.light) .favorite-contact b{color:#f1eee4!important}body:not(.light) .favorite-contact strong{background:#a33a28!important;color:#fff!important;border-color:#c8bda5!important;box-shadow:3px 3px 0 #070806!important}
+body:not(.light) .form-group input,body:not(.light) .form-group select,body:not(.light) .form-group textarea,body:not(.light) .chat-input input,body:not(.light) .search-modal input,body:not(.light) .bank-toolbar select{background:#151713!important;color:#f4f0e7!important;border-color:#8d897d!important;box-shadow:2px 2px 0 #070806!important}
+body:not(.light) .ipc-tools-header,body:not(.light) .directory-portal-header{background:#282a23!important;border-color:#8d897d!important}body:not(.light) .ipc-tool-tabs{background:#191b17!important;border-color:#8d897d!important}body:not(.light) .ipc-tool-tab{background:#272a24!important;color:#f1eee4!important;border-color:#8d897d!important;box-shadow:4px 4px 0 #070806!important}body:not(.light) .ipc-tool-tab.active{background:#a33a28!important;color:#fff!important}
+body:not(.light) .secondary-btn,body:not(.light) .tool-fullscreen-btn,body:not(.light) .directory-fullscreen-btn,body:not(.light) .calendar-nav{background:#3b3528!important;color:#fffdf5!important;border-color:#d59a18!important;box-shadow:4px 4px 0 #070806!important}
+body:not(.light) .portal-credit{background:#22241f!important;border-color:#8d897d!important}body:not(.light) .portal-credit b{color:#fffdf5!important}
+body:not(.light) .manga-sticker{background:#3b3528!important;color:#f3c54c!important;border-color:#a69e88!important;box-shadow:4px 4px 0 #070806!important}
+body:not(.light) .quick-access-card::after,body:not(.light) .game-top::after{background:#9e3827!important;color:#fff!important;border-color:#c8bda5!important;box-shadow:3px 3px 0 #070806!important}
+body:not(.light) .hero-illustration .hf{color:#e04b32!important;filter:drop-shadow(3px 3px 0 #070806)!important}body:not(.light) .hero-illustration .hf:nth-child(even){color:#d59a18!important}
+
+/* Mobile-first resilience */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden}body{min-width:0!important;overflow-x:hidden!important}.main,.content,.card,.overview-info-row,.right-col,.game-card,.ipc-tools-page,.directory-page{min-width:0!important;max-width:100%!important}
+img,svg,canvas,video{max-width:100%;height:auto}.card,.hero{overflow-wrap:anywhere;word-break:normal}.nav a,.submenu a,.app small,.favorite-contact b,.card-header h3,.hero h1{white-space:normal!important;text-overflow:clip!important;overflow:visible!important}
+input,select,textarea,button{max-width:100%;font-size:16px!important}iframe{max-width:100%!important}
+@media(max-width:900px){
+ body{display:block!important}.sidebar{position:relative!important;width:100%!important;height:auto!important;min-height:0!important;border-right:0!important;border-bottom:3px solid var(--border)!important}.brand{padding:12px 14px!important}.nav{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px!important;padding:10px!important;overflow:visible!important}.nav a{min-height:48px!important;margin:0!important;padding:10px!important;justify-content:flex-start!important;line-height:1.35!important}.submenu{grid-column:1/-1!important;padding-left:14px!important}.submenu.open{max-height:500px!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px!important}.user-box,.portal-credit{display:none!important}.main{width:100%!important}.topbar{position:sticky!important;top:0!important;height:54px!important;padding:0 14px!important}.tech-ticker{top:54px!important}.content,.ipc-tools-page,.directory-page{padding:12px!important;gap:16px!important}.manga-sticker{display:none!important}
+ .hero{padding:18px!important;box-shadow:5px 6px 0 #111!important}.hero>div:first-child{width:100%!important}.hero h1{font-size:clamp(24px,7vw,34px)!important}.shift-info{width:100%!important;padding:10px 12px!important;display:grid!important;grid-template-columns:1fr 1fr!important}.shift-info>i{display:none!important}
+ .quick-access-card .apps{grid-template-columns:repeat(3,minmax(0,1fr))!important}.overview-info-row{grid-template-columns:1fr!important}.favorite-contact-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.game-top{align-items:stretch!important}.game-scoreboard{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important}.stop-game-btn{grid-column:1/-1!important}.bank-toolbar>*{flex:1 1 180px!important}#bankSummary{flex-basis:100%!important}.game-answers{grid-template-columns:1fr!important}.ipc-tool-frame,.directory-frame{width:100%!important;min-height:70vh!important;height:75vh!important}
+}
+@media(max-width:600px){
+ .nav{grid-template-columns:repeat(2,minmax(0,1fr))!important}.submenu.open{grid-template-columns:1fr!important}.nav a{font-size:14px!important}.brand-text h3{font-size:17px!important}.brand-logo.modern-logo{width:42px!important;height:42px!important}
+ .content,.ipc-tools-page,.directory-page{padding:9px!important}.card{padding:14px!important;border-width:2px!important;box-shadow:4px 5px 0 #111!important}.hero{border-width:2px!important}.hero::after{display:none!important}.quick-access-card::after,.game-top::after{font-size:11px!important;right:10px!important}.quick-access-card .apps{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}.app{padding:8px 4px!important}.app-icon{width:50px!important;height:50px!important;font-size:22px!important}.app small{font-size:12px!important;line-height:1.35!important}
+ .favorite-contact-grid{grid-template-columns:1fr!important}.favorite-contact{padding:10px!important}.favorite-contact strong{min-width:60px!important;font-size:20px!important}.calendar-day{min-height:36px!important;font-size:12px!important}.calendar-weekdays,.calendar-days{gap:3px!important}.card-header{align-items:flex-start!important;gap:8px!important}.card-header h3{font-size:17px!important}.game-top h2{font-size:23px!important}.game-scoreboard{grid-template-columns:1fr 1fr!important}.game-scoreboard div:nth-child(3){grid-column:1/-1!important}.bank-toolbar{display:grid!important;grid-template-columns:1fr!important}.bank-toolbar>*{width:100%!important}.question-meta{gap:8px!important;flex-wrap:wrap!important}.game-question{font-size:18px!important}.ipc-tools-header,.directory-portal-header{padding:15px!important}.ipc-tool-tabs{padding:10px!important}.ipc-tool-frame,.directory-frame{height:78vh!important;min-height:620px!important}.chat-popup{left:8px!important;right:8px!important;width:auto!important;bottom:78px!important}.notif-dropdown{left:8px!important;right:8px!important;width:auto!important}.search-modal{width:calc(100vw - 20px)!important}.modal-overlay{padding:70px 10px 10px!important}
+}
+@media(max-width:380px){.nav{grid-template-columns:1fr!important}.quick-access-card .apps{grid-template-columns:1fr 1fr!important}.shift-info{grid-template-columns:1fr!important}.game-scoreboard{grid-template-columns:1fr!important}.game-scoreboard div:nth-child(3){grid-column:auto!important}.hero h1{font-size:23px!important}.card-header{flex-direction:column!important}.card-header a{align-self:flex-start!important}}
+}
+</style>
+
+<style id="darkNoPurpleGuarantee">
+@media screen{
+body:not(.light) .app-icon{background:#34362f!important;color:#f4f0e7!important;border-color:#9b9688!important}
+body:not(.light) .app:nth-child(3n+1) .app-icon{background:#9e3827!important}
+body:not(.light) .app:nth-child(3n+2) .app-icon{background:#886414!important}
+body:not(.light) .app:nth-child(3n) .app-icon{background:#2f6661!important}
+body:not(.light) .news-tag,body:not(.light) .badge{background:#a33a28!important}
+body:not(.light) .news-tag.blue{background:#2f6661!important}
+body:not(.light) .btn-primary,body:not(.light) .file-btn,body:not(.light) .game-hero-icon,body:not(.light) .result-medal,body:not(.light) .chat-head,body:not(.light) .chat-msg.me{background:#a33a28!important}
+body:not(.light) .calendar-day.today{background:#9e3827!important}
+}
+</style>
+
+<!-- ===== V4 readability and calendar state fix ===== -->
+<style id="animeComicsV4Fix">
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&family=Paytone+One&display=swap&subset=vietnamese');
+@media screen {
+/* Readable Vietnamese manga typography: no fake bold and no hard text shadow */
+html,body,button,input,select,textarea{font-family:'Mali','Segoe UI',Arial,sans-serif!important;font-synthesis:none!important;font-kerning:normal!important;text-rendering:optimizeLegibility!important;-webkit-font-smoothing:antialiased!important}
+body{font-weight:500!important}
+.brand-text h3,.hero h1,.card-header h3,.game-top h2,.ipc-tools-header h2,.directory-portal-header h2,.calendar-title,.game-question,.game-start h3,.game-result h3,.tools-kicker,.directory-kicker,.game-kicker{
+ font-family:'Paytone One','Mali','Segoe UI',sans-serif!important;font-weight:400!important;letter-spacing:0!important;line-height:1.38!important;
+ text-shadow:none!important;-webkit-text-stroke:0!important;filter:none!important
+}
+.hero h1{font-size:clamp(25px,2.5vw,38px)!important;max-width:100%!important}
+.hero h1,.hero small,.brand-text h3,.card-header h3,.nav a,.submenu a,.calendar-title,.calendar-day,.favorite-contact,.app small,.game-question{text-shadow:none!important;filter:none!important}
+.nav a,.submenu a,.app small,.favorite-contact b,.game-top p,.news-body,.form-group label,.tech-ticker span,.portal-credit,.user-info small{font-family:'Mali','Segoe UI',sans-serif!important;font-weight:600!important}
+.hero-illustration .hf{filter:none!important}
+
+/* Calendar state colors must always remain semantically distinct */
+.calendar-day{transition:background-color .16s ease,color .16s ease,border-color .16s ease,transform .16s ease!important}
+/* Light default hover: warm yellow, never red */
+body.light .calendar-day:not(.sat-work):not(.sat-off):not(.today):hover{
+ background:#fff0a8!important;color:#2b241b!important;border-color:#b88900!important;box-shadow:2px 2px 0 #25211d!important;transform:translateY(-1px)!important
+}
+body.light .calendar-day.sat-work{background:#d7f7df!important;color:#155d2c!important;border-color:#2c9b4b!important}
+body.light .calendar-day.sat-off{background:#ffe0e0!important;color:#9b2525!important;border-color:#d94a4a!important}
+body.light .calendar-day.sat-work:hover{background:#bceec9!important;color:#104c24!important;border-color:#207f3a!important}
+body.light .calendar-day.sat-off:hover{background:#ffcaca!important;color:#7f1919!important;border-color:#bd3434!important}
+body.light .calendar-day.today{background:#df397c!important;color:#fff!important;border-color:#9e1f52!important}
+
+/* Dark: work Saturday green, off Saturday red, ordinary hover amber/olive */
+body:not(.light) .calendar-day.sat-work{background:#183b25!important;color:#9be5ae!important;border-color:#3fa75b!important;box-shadow:2px 2px 0 #070806!important}
+body:not(.light) .calendar-day.sat-off{background:#48201d!important;color:#ffaaa0!important;border-color:#d05a4d!important;box-shadow:2px 2px 0 #070806!important}
+body:not(.light) .calendar-day:not(.sat-work):not(.sat-off):not(.today):hover{
+ background:#443a1d!important;color:#f4d675!important;border-color:#c89d27!important;box-shadow:2px 2px 0 #070806!important;transform:translateY(-1px)!important
+}
+body:not(.light) .calendar-day.sat-work:hover{background:#20502f!important;color:#c8f7d2!important;border-color:#62c77b!important}
+body:not(.light) .calendar-day.sat-off:hover{background:#5b2721!important;color:#ffd0ca!important;border-color:#ef796b!important}
+body:not(.light) .calendar-day.today{background:#a83d2c!important;color:#fff9ed!important;border-color:#e37a63!important}
+/* Today retains priority if also Saturday */
+body .calendar-day.today.sat-work,body .calendar-day.today.sat-off{color:#fff!important}
+.calendar-legend .lg-work{background:#35c65b!important;border:1px solid #176d2e!important}.calendar-legend .lg-off{background:#ef5350!important;border:1px solid #8f2424!important}
+
+/* Reduce heavy shadows for reading comfort while preserving comic depth */
+.card,.sidebar,.user-chip,.notif-dropdown,.chat-popup,.search-modal{box-shadow:4px 5px 0 rgba(17,17,17,.9)!important}
+body:not(.light) .card,body:not(.light) .sidebar,body:not(.light) .user-chip,body:not(.light) .notif-dropdown,body:not(.light) .chat-popup,body:not(.light) .search-modal{box-shadow:4px 5px 0 #070806!important}
+.hero{box-shadow:5px 6px 0 #111!important}body:not(.light) .hero{box-shadow:5px 6px 0 #070806!important}
+.card:hover{box-shadow:6px 7px 0 #111!important}body:not(.light) .card:hover{box-shadow:6px 7px 0 #070806!important}
+
+@media(max-width:600px){
+ .hero h1{font-family:'Paytone One','Mali',sans-serif!important;font-size:clamp(22px,6.8vw,30px)!important;line-height:1.42!important}
+ .card-header h3{font-size:16px!important;line-height:1.4!important}.nav a{font-size:14px!important;line-height:1.45!important}
+ .calendar-day{font-size:12px!important;box-shadow:none!important}.calendar-title{font-size:15px!important}
+ .card,.sidebar{box-shadow:3px 4px 0 #111!important}body:not(.light) .card,body:not(.light) .sidebar{box-shadow:3px 4px 0 #070806!important}
+}
+}
+</style>
+
+<style id="animeV5Layout">
+@media screen{
+.mobile-menu-btn,.mobile-nav-overlay,.mobile-nav-close{display:none}
+/* Directory shell manga framing */
+.directory-shell{border:3px solid var(--border)!important;box-shadow:4px 5px 0 #111!important}.directory-portal-header{position:relative;overflow:hidden}.directory-portal-header::after{content:'CALL!';font-family:'Paytone One','Mali',sans-serif;position:absolute;right:145px;top:12px;padding:5px 12px;border:3px solid #111;border-radius:50%;background:#96e1e7;color:#111;transform:rotate(6deg);box-shadow:3px 3px 0 #111}
+body:not(.light) .directory-shell{box-shadow:4px 5px 0 #070806!important}.directory-frame-wrap{border-top:3px solid var(--border)!important}
+@media(max-width:900px){
+ body{display:block!important;padding-top:54px!important}.main{width:100%!important}.topbar{position:fixed!important;left:0;right:0;top:0!important;z-index:100!important;justify-content:flex-end!important}.mobile-menu-btn{display:inline-flex!important;align-items:center;justify-content:center;width:42px;height:42px;margin-right:auto;border:2px solid #111;border-radius:10px;background:#ffe66d;color:#111;box-shadow:3px 3px 0 #111;font-size:20px;cursor:pointer}.mobile-menu-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 #111}.sidebar{display:flex!important;position:fixed!important;z-index:130!important;top:0!important;left:0!important;bottom:0!important;width:min(86vw,340px)!important;height:100dvh!important;overflow-y:auto!important;transform:translateX(-110%)!important;transition:transform .26s ease!important;border-right:3px solid var(--border)!important;border-bottom:0!important;box-shadow:8px 0 0 rgba(0,0,0,.25)!important}.sidebar.mobile-open{transform:translateX(0)!important}.mobile-nav-overlay{position:fixed;inset:0;z-index:120;background:rgba(0,0,0,.58);backdrop-filter:blur(2px)}.mobile-nav-overlay.open{display:block!important}.mobile-nav-close{display:inline-flex!important;position:absolute;right:10px;top:10px;width:38px;height:38px;align-items:center;justify-content:center;border:2px solid #111;border-radius:50%;background:#ef5350;color:#fff;z-index:2;cursor:pointer}.brand{padding-right:56px!important}.nav{display:block!important;padding:12px!important;overflow:visible!important}.nav a{display:flex!important;width:100%!important;min-height:48px!important;margin-bottom:7px!important;padding:11px 12px!important}.submenu{display:block!important;padding-left:22px!important}.submenu.open{display:block!important;max-height:500px!important}.submenu a{min-height:44px!important}.user-box,.portal-credit{display:flex!important}.tech-ticker{position:relative!important;top:auto!important}.directory-portal-header::after{display:none!important}
+ body.mobile-nav-lock{overflow:hidden!important;touch-action:none}
+}
+@media(max-width:600px){.topbar .user-chip{max-width:48vw;overflow:hidden}.topbar .user-chip b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.directory-page{padding:8px!important}.directory-shell{border-width:2px!important}.directory-frame{height:calc(100dvh - 150px)!important;min-height:620px!important}}
+}
+</style>
+
+<!-- ===== V6 COLOR & CONTRAST FIX: anime dark, minigame hover, optimized light ===== -->
+<style id="animeComicsV6ColorFix">
+@media screen {
+  /* 1) DARK MODE: bảng màu anime neon, loại bỏ nâu/olive */
+  body:not(.light) {
+    --bg:#0b0d16;
+    --panel:#151827;
+    --panel-2:#20243a;
+    --border:#9da8c7;
+    --text:#f7f8ff;
+    --text-strong:#ffffff;
+    --muted:#c8cde0;
+    --muted-2:#aeb6d0;
+    --accent:#43d9ff;
+    --accent-2:#ff4f9a;
+    --accent-soft:rgba(67,217,255,.16);
+    --input-bg:#101321;
+    --input-text:#ffffff;
+    --input-placeholder:#9da6c1;
+    --shadow:4px 5px 0 #03040a;
+    --focus:0 0 0 4px rgba(67,217,255,.28);
+    color-scheme:dark;
+    background-color:#0b0d16!important;
+    background-image:
+      radial-gradient(rgba(67,217,255,.10) 1px,transparent 1px),
+      radial-gradient(circle at 12% 5%,rgba(255,79,154,.12),transparent 27%),
+      linear-gradient(145deg,#0b0d16,#121629)!important;
+    background-size:20px 20px,100% 100%,100% 100%!important;
+  }
+  body:not(.light)::before {
+    background:radial-gradient(circle at 16% 4%,rgba(67,217,255,.13),transparent 29%),radial-gradient(circle at 88% 18%,rgba(255,79,154,.10),transparent 27%)!important;
+  }
+  body:not(.light) .sidebar,
+  body:not(.light) .card,
+  body:not(.light) .user-chip,
+  body:not(.light) .notif-dropdown,
+  body:not(.light) .chat-popup,
+  body:not(.light) .search-modal {background:#151827!important;color:#f7f8ff!important;border-color:#7d88aa!important;box-shadow:4px 5px 0 #03040a!important}
+  body:not(.light) .sidebar {background:#111421!important}
+  body:not(.light) .topbar,
+  body:not(.light) .brand {background:#20243a!important;border-color:#7d88aa!important;box-shadow:0 5px 0 #03040a!important}
+  body:not(.light) .brand-logo.modern-logo {background:#ff4f9a!important;border-color:#f7f8ff!important;box-shadow:4px 4px 0 #03040a!important}
+  body:not(.light) .nav a {color:#eef1ff!important}
+  body:not(.light) .nav a:hover,
+  body:not(.light) .nav a.active {background:#243b55!important;color:#ffffff!important;border-color:#43d9ff!important;box-shadow:4px 4px 0 #03040a!important}
+  body:not(.light) .hero {background:linear-gradient(135deg,#19243b,#292044)!important;border-color:#7ee7ff!important;box-shadow:5px 6px 0 #03040a!important}
+  body:not(.light) .hero h1,
+  body:not(.light) .hero small {color:#ffffff!important;-webkit-text-fill-color:#ffffff!important}
+  body:not(.light) .hero .stat,
+  body:not(.light) .shift-info {background:#171b2c!important;color:#fff!important;border-color:#7d88aa!important;box-shadow:4px 4px 0 #03040a!important}
+  body:not(.light) .card-header {border-color:#7d88aa!important}
+  body:not(.light) .card-header a,
+  body:not(.light) .secondary-btn,
+  body:not(.light) .tool-fullscreen-btn,
+  body:not(.light) .directory-fullscreen-btn,
+  body:not(.light) .calendar-nav {background:#21334d!important;color:#f8fbff!important;border-color:#43d9ff!important;box-shadow:4px 4px 0 #03040a!important}
+  body:not(.light) .calendar-day,
+  body:not(.light) .favorite-contact,
+  body:not(.light) .game-scoreboard div,
+  body:not(.light) .answer-btn,
+  body:not(.light) .news-manage-item,
+  body:not(.light) .ipc-tool-tab {background:#20243a!important;color:#f7f8ff!important;border-color:#7d88aa!important;box-shadow:2px 2px 0 #03040a!important}
+  body:not(.light) .favorite-contact strong,
+  body:not(.light) .btn-primary,
+  body:not(.light) .game-hero-icon,
+  body:not(.light) .result-medal,
+  body:not(.light) .chat-head,
+  body:not(.light) .chat-msg.me {background:#ff4f9a!important;color:#fff!important}
+  body:not(.light) .file-btn {background:#168c89!important;color:#fff!important}
+  body:not(.light) .app:nth-child(3n+1) .app-icon {background:#ff4f9a!important}
+  body:not(.light) .app:nth-child(3n+2) .app-icon {background:#7857e6!important}
+  body:not(.light) .app:nth-child(3n) .app-icon {background:#168c89!important}
+  body:not(.light) .news-tag,
+  body:not(.light) .badge,
+  body:not(.light) .calendar-day.today {background:#e43f88!important}
+  body:not(.light) .news-tag.blue {background:#5872e8!important}
+  body:not(.light) .portal-credit {background:#181c2c!important;border-color:#7d88aa!important}
+  body:not(.light) .manga-sticker {background:#243b55!important;color:#7ee7ff!important;border-color:#7d88aa!important;box-shadow:4px 4px 0 #03040a!important}
+  body:not(.light) .quick-access-card::after,
+  body:not(.light) .game-top::after {background:#e43f88!important;color:#fff!important;border-color:#f7f8ff!important;box-shadow:3px 3px 0 #03040a!important}
+  body:not(.light) .hero-illustration .hf {color:#43d9ff!important}
+  body:not(.light) .hero-illustration .hf:nth-child(even) {color:#ff4f9a!important}
+
+  /* 2) MINI GAME: hover không dùng nền vàng, luôn đủ tương phản */
+  .answer-btn:hover:not(:disabled) {background:#c9f4ff!important;color:#102033!important;border-color:#168ba8!important;box-shadow:3px 3px 0 #111!important}
+  body:not(.light) .answer-btn:hover:not(:disabled) {background:#43d9ff!important;color:#07121a!important;border-color:#bdf5ff!important;box-shadow:3px 3px 0 #03040a!important}
+  .answer-btn.correct,
+  .answer-btn.correct:hover {background:#c8f3df!important;color:#075b3b!important;border-color:#18845a!important}
+  .answer-btn.wrong,
+  .answer-btn.wrong:hover {background:#ffd9e5!important;color:#8f1238!important;border-color:#c83264!important}
+  body:not(.light) .answer-btn.correct,
+  body:not(.light) .answer-btn.correct:hover {background:#174b38!important;color:#bfffe1!important;border-color:#43d996!important}
+  body:not(.light) .answer-btn.wrong,
+  body:not(.light) .answer-btn.wrong:hover {background:#542038!important;color:#ffd1e3!important;border-color:#ff6aa7!important}
+
+  /* 3) LIGHT MODE: header và chữ rõ, dịu mắt, vẫn giữ chất anime */
+  body.light {
+    --bg:#f5f8ff;
+    --panel:#ffffff;
+    --panel-2:#eef5ff;
+    --border:#26324a;
+    --text:#172033;
+    --text-strong:#0a1020;
+    --muted:#46536b;
+    --muted-2:#5d6980;
+    --accent:#bf2f70;
+    --accent-2:#5747c7;
+    --accent-soft:#e8f7ff;
+    --input-bg:#ffffff;
+    --input-text:#111827;
+    --input-placeholder:#68748a;
+    background-color:#f5f8ff!important;
+    background-image:radial-gradient(rgba(38,50,74,.10) 1px,transparent 1px),linear-gradient(145deg,#f9fbff,#edf4ff)!important;
+    background-size:20px 20px,100% 100%!important;
+  }
+  body.light .topbar {background:#dff6ff!important;color:#111827!important;border-color:#26324a!important;box-shadow:0 5px 0 #26324a!important}
+  body.light .brand {background:#ffe66d!important;color:#111827!important;border-color:#26324a!important}
+  body.light .sidebar {background:#fff9dd!important;border-color:#26324a!important}
+  body.light .brand-text h3,
+  body.light .user-chip b,
+  body.light .card-header h3,
+  body.light .calendar-title,
+  body.light .game-top h2 {color:#0a1020!important}
+  body.light .brand-text small,
+  body.light .user-info small,
+  body.light .news-meta,
+  body.light .game-top p,
+  body.light .question-meta,
+  body.light .calendar-legend {color:#46536b!important}
+  body.light .nav a {color:#172033!important}
+  body.light .nav a:hover,
+  body.light .nav a.active {background:#bcefff!important;color:#101827!important;border-color:#26324a!important}
+  body.light .card {background:#ffffff!important;color:#172033!important;border-color:#26324a!important}
+  body.light .card-header {border-color:#26324a!important}
+  body.light .card-header a {background:#ffe66d!important;color:#172033!important;border-color:#26324a!important}
+  body.light .hero {background:linear-gradient(135deg,#ffe66d,#ffcf6a)!important;color:#111827!important;border-color:#26324a!important}
+  body.light .hero h1,
+  body.light .hero small,
+  body.light .hero .stat b,
+  body.light .hero .stat span,
+  body.light .shift-info span,
+  body.light .shift-info b {color:#111827!important;-webkit-text-fill-color:#111827!important}
+  body.light .hero .stat,
+  body.light .shift-info {background:#fff!important;color:#111827!important;border-color:#26324a!important}
+  body.light .topbar i {color:#26324a!important}
+  body.light .topbar i:hover {color:#bf2f70!important}
+  body.light .tech-ticker {background:#26324a!important}
+  body.light .tech-ticker span {color:#ffffff!important}
+  body.light .tech-ticker span b {color:#ffe66d!important}
+}
+</style>
+
 </head>
 <body>
 
@@ -298,10 +773,22 @@ body.light .sidebar,body.light .topbar,body.light .card,body.light .user-chip,bo
 <i class="fa-regular fa-sun" id="themeToggle" title="Đổi giao diện"></i>
 <div class="user-chip"><b style="font-size:13px;">QA Department</b></div>
 </div>
+<div class="tech-ticker"><span>HỆ THỐNG PORTAL ỔN ĐỊNH <b>//</b> IPC SAVIPHARM <b>//</b> BỘ PHẬN ĐẢM BẢO CHẤT LƯỢNG <b>//</b> DỮ LIỆU ĐƯỢC LƯU CỤC BỘ TRÊN TRÌNH DUYỆT <b>//</b> HỆ THỐNG PORTAL ỔN ĐỊNH <b>//</b> IPC SAVIPHARM <b>//</b></span></div>
 
 <div class="content page active" id="page-tongquan">
 <section class="hero">
 <div><small id="dateStr">Ngày hiện tại</small><h1 id="greeting">Chào mừng đến Portal IPC!</h1></div>
+<div class="hero-illustration" aria-hidden="true">
+  <i class="fa-solid fa-capsules hf hf-a"></i>
+  <i class="fa-solid fa-flask hf hf-b"></i>
+  <i class="fa-solid fa-mortar-pestle hf hf-c"></i>
+  <i class="fa-solid fa-dna hf hf-d"></i>
+  <i class="fa-solid fa-heart-pulse hf hf-e"></i>
+  <i class="fa-solid fa-shield-virus hf hf-f"></i>
+  <i class="fa-solid fa-pills hf hf-g"></i>
+  <i class="fa-solid fa-microscope hf hf-h"></i>
+  <svg class="hero-orbit" viewBox="0 0 200 200" aria-hidden="true"><circle class="orbit-ring" cx="100" cy="100" r="70"/><circle class="orbit-ring orbit-ring-2" cx="100" cy="100" r="46"/></svg>
+</div>
 <div class="shift-info"><div><span>THỜI GIAN THỰC</span><b id="realtimeClock">--:--:--</b></div><i></i><div><span>NGÀY CÔNG THÁNG NÀY</span><b><em class="fa-solid fa-briefcase"></em> <strong id="workingDaysCount">--</strong> ngày</b></div></div>
 </section>
 <section class="card quick-access-card">
@@ -318,7 +805,7 @@ body.light .sidebar,body.light .topbar,body.light .card,body.light .user-chip,bo
 <a class="app quick-extra" href="https://savipharm.sharepoint.com/:f:/r/Documents/Phong%20Dam%20Bao%20Chat%20Luong/HO%20SO%20LO?csf=1&amp;web=1&amp;e=QHbSJl" target="_blank" rel="noopener"><div class="app-icon" style="background:#b45309;"><i class="fa-solid fa-folder-tree"></i></div><small>Hồ sơ lô</small></a>
 </div>
 </section>
-<div class="overview-info-row"><section class="card calendar-card calendar-compact"><div class="card-header"><h3><i class="fa-regular fa-calendar"></i> Lịch làm việc</h3><a href="#" id="todayBtn">Hôm nay</a></div><div class="calendar-widget"><div class="calendar-toolbar"><button class="calendar-nav" id="prevMonth"><i class="fa-solid fa-chevron-left"></i></button><div class="calendar-title" id="calendarTitle">Tháng</div><button class="calendar-nav" id="nextMonth"><i class="fa-solid fa-chevron-right"></i></button></div><div class="calendar-weekdays"><span>T2</span><span>T3</span><span>T4</span><span>T5</span><span>T6</span><span>T7</span><span>CN</span></div><div class="calendar-days" id="calendarDays"></div></div></section><section class="card favorite-contacts-card">
+<div class="overview-info-row"><section class="card calendar-card calendar-compact"><div class="card-header"><h3><i class="fa-regular fa-calendar"></i> Lịch làm việc</h3><a href="#" id="todayBtn">Hôm nay</a></div><div class="calendar-widget"><div class="calendar-toolbar"><button class="calendar-nav" id="prevMonth"><i class="fa-solid fa-chevron-left"></i></button><div class="calendar-title" id="calendarTitle">Tháng</div><button class="calendar-nav" id="nextMonth"><i class="fa-solid fa-chevron-right"></i></button></div><div class="calendar-weekdays"><span>T2</span><span>T3</span><span>T4</span><span>T5</span><span>T6</span><span>T7</span><span>CN</span></div><div class="calendar-days" id="calendarDays"></div><div class="calendar-legend"><span><i class="lg-work"></i> Thứ 7 làm việc</span><span><i class="lg-off"></i> Thứ 7 nghỉ</span></div></div></section><section class="card favorite-contacts-card">
 <div class="card-header"><h3><i class="fa-solid fa-phone-volume"></i> Liên hệ thường dùng</h3><a href="#" id="showAllDirectory">Tất cả &gt;</a></div>
 <div class="favorite-contact-grid">
 <div class="favorite-contact"><strong>408</strong><span><i class="fa-solid fa-flask"></i><b>Pha chế NMS1</b></span></div>
@@ -331,7 +818,7 @@ body.light .sidebar,body.light .topbar,body.light .card,body.light .user-chip,bo
 
 </section></div>
 <section class="card game-card">
-<div class="game-top"><div><span class="game-kicker"><i class="fa-solid fa-flask-vial"></i> MINI GAME KIẾN THỨC DƯỢC</span><h2>Dược sĩ nhanh trí</h2><p>Nạp câu hỏi từ Excel và bắt đầu ôn tập.</p></div><div class="game-scoreboard"><div><b id="gameScore">0</b><span>Điểm</span></div><div><b id="gameStreak">0</b><span>Chuỗi đúng</span></div><div><b id="gameProgress">0/0</b><span>Tiến độ</span></div></div></div>
+<div class="game-top"><div><span class="game-kicker"><i class="fa-solid fa-flask-vial"></i> MINI GAME KIẾN THỨC DƯỢC</span><h2>Dược sĩ nhanh trí</h2><p>Nạp câu hỏi từ Excel và bắt đầu ôn tập.</p></div><div class="game-scoreboard"><div><b id="gameScore">0</b><span>Điểm</span></div><div><b id="gameStreak">0</b><span>Chuỗi đúng</span></div><div><b id="gameProgress">0/0</b><span>Tiến độ</span></div><button class="stop-game-btn" id="stopGameBtn" hidden title="Dừng mini game"><i class="fa-solid fa-stop"></i> Dừng</button></div></div>
 <div class="bank-toolbar"><label class="file-btn" for="excelInput"><i class="fa-solid fa-file-excel"></i> Nạp file Excel</label><input id="excelInput" type="file" accept=".xlsx" hidden><select id="questionCount"><option value="5">5 câu</option><option value="10" selected>10 câu</option><option value="15">15 câu</option><option value="20">20 câu</option></select><button class="secondary-btn" id="clearImportedBtn"><i class="fa-solid fa-trash-can"></i> Xóa câu hỏi đã nạp</button><span id="bankSummary">Đang tải...</span></div>
 <div class="import-report" id="importReport" hidden></div>
 <div class="game-stage"><div class="game-start" id="gameStart"><div class="game-hero-icon"><i class="fa-solid fa-capsules"></i></div><h3>Sẵn sàng thử sức?</h3><p>Câu hỏi nạp từ Excel được lưu trong trình duyệt. Hãy giữ file Excel làm nguồn dữ liệu chính.</p><button class="btn-primary game-btn" id="startGameBtn"><i class="fa-solid fa-play"></i> Bắt đầu chơi</button></div><div class="game-question-wrap" id="gameQuestionWrap" hidden><div class="game-progress-bar"><span id="gameProgressBar"></span></div><div class="question-meta"><span id="questionTopic"></span><span id="questionNumber"></span></div><h3 class="game-question" id="gameQuestion"></h3><div class="game-answers" id="gameAnswers"></div><div class="game-feedback" id="gameFeedback" hidden></div><button class="btn-primary game-btn next-btn" id="nextQuestionBtn" hidden>Câu tiếp theo</button></div><div class="game-result" id="gameResult" hidden><div class="result-medal"><i class="fa-solid fa-trophy"></i></div><h3 id="resultTitle">Hoàn thành!</h3><p id="resultText"></p><div class="result-score"><b id="finalScore">0</b><span>điểm</span></div><button class="btn-primary game-btn" id="replayGameBtn"><i class="fa-solid fa-rotate-right"></i> Chơi lại</button></div></div>
@@ -1465,6 +1952,24 @@ chatClose.addEventListener("click", function(){ chatPopup.classList.remove("open
 function sendMsg(){
   var txt = chatInput.value.trim();
   if (!txt) return;
+  var secretCode = txt.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "").toUpperCase();
+  var secretGames = {
+    "IPC2048": "ipc2048Overlay", "2048IPC": "ipc2048Overlay", "GAME2048": "ipc2048Overlay",
+    "IPCCARO": "ipcCaroOverlay", "CAROIPC": "ipcCaroOverlay", "GAMECARO": "ipcCaroOverlay",
+    "IPCSUDOKU": "ipcSudokuOverlay", "SUDOKUIPC": "ipcSudokuOverlay", "GAMESUDOKU": "ipcSudokuOverlay", "IPCSODOKU": "ipcSudokuOverlay"
+  };
+  if (secretGames[secretCode]) {
+    chatInput.value = "";
+    var meSecret = document.createElement("div");
+    meSecret.className = "chat-msg me"; meSecret.textContent = txt;
+    chatBody.appendChild(meSecret);
+    var botSecret = document.createElement("div");
+    botSecret.className = "chat-msg"; botSecret.textContent = "Mã hợp lệ. Đang mở trò chơi bí mật! 🎮";
+    chatBody.appendChild(botSecret);
+    chatBody.scrollTop = chatBody.scrollHeight;
+    window.dispatchEvent(new CustomEvent("ipc-open-secret-game", { detail: secretGames[secretCode] }));
+    return;
+  }
   var me = document.createElement("div");
   me.className = "chat-msg me"; me.textContent = txt;
   chatBody.appendChild(me);
@@ -1486,6 +1991,19 @@ chatInput.addEventListener("keydown", function(e){ if (e.key === "Enter") sendMs
 
 /* ============ MONTH CALENDAR ============ */
 var calendarCurrent = new Date();
+/* Mốc tham chiếu: 11/07/2026 là thứ 7 NGHỈ. Từ đó, thứ 7 nghỉ/làm xen kẽ mỗi 2 tuần. */
+var SAT_OFF_ANCHOR = new Date(2026, 6, 11);
+function isSaturdayOff(dateObj) {
+  var diffDays = Math.round((dateObj - SAT_OFF_ANCHOR) / 86400000);
+  var diffWeeks = Math.round(diffDays / 7);
+  return ((diffWeeks % 2) + 2) % 2 === 0;
+}
+function tagSaturday(cell, dateObj) {
+  if (dateObj.getDay() !== 6) return;
+  var off = isSaturdayOff(dateObj);
+  cell.classList.add(off ? "sat-off" : "sat-work");
+  cell.title = "Thứ 7 " + (off ? "- Nghỉ" : "- Làm việc");
+}
 function renderCalendar() {
   var title = document.getElementById("calendarTitle");
   var daysBox = document.getElementById("calendarDays");
@@ -1501,8 +2019,10 @@ function renderCalendar() {
   var prevLast = new Date(y, m, 0).getDate();
   for (var i = startOffset - 1; i >= 0; i--) {
     var mutedPrev = document.createElement("div");
+    var prevDateObj = new Date(y, m - 1, prevLast - i);
     mutedPrev.className = "calendar-day muted";
     mutedPrev.textContent = prevLast - i;
+    tagSaturday(mutedPrev, prevDateObj);
     daysBox.appendChild(mutedPrev);
   }
   for (var d = 1; d <= last.getDate(); d++) {
@@ -1512,14 +2032,17 @@ function renderCalendar() {
     cell.className = "calendar-day" + (isWeekend ? " weekend" : "");
     if (d === today.getDate() && m === today.getMonth() && y === today.getFullYear()) cell.className += " today";
     cell.textContent = d;
+    tagSaturday(cell, dateObj);
     daysBox.appendChild(cell);
   }
   var totalCells = daysBox.children.length;
   var nextDay = 1;
   while (totalCells < 42) {
     var mutedNext = document.createElement("div");
+    var nextDateObj = new Date(y, m + 1, nextDay);
     mutedNext.className = "calendar-day muted";
     mutedNext.textContent = nextDay++;
+    tagSaturday(mutedNext, nextDateObj);
     daysBox.appendChild(mutedNext);
     totalCells++;
   }
@@ -1556,11 +2079,12 @@ function normalizeRow(r,rowNo,index){const req=["CauHoi","DapAnA","DapAnB","DapA
 async function importExcel(file){const rep=document.getElementById("importReport");rep.hidden=false;rep.className="import-report";rep.textContent="Đang đọc file Excel...";try{const rows=await readXlsx(file),valid=[],errors=[];rows.forEach((r,i)=>{try{const q=normalizeRow(r,i+2,valid.length);if(q)valid.push(q)}catch(e){errors.push(e.message)}});if(valid.length){importedQuestions=valid;saveImported();}updateBankUI();rep.className="import-report "+(errors.length?"bad":"ok");rep.innerHTML=`<b>Đã nạp ${valid.length} câu hợp lệ.</b> ${errors.length?`Có ${errors.length} lỗi:<br>${errors.slice(0,8).map(esc).join("<br>")}`:"Không phát hiện lỗi cấu trúc."}`;}catch(e){rep.className="import-report bad";rep.innerHTML="<b>Không thể đọc file:</b> "+esc(e.message)+"<br>Hãy sử dụng đúng file Excel mẫu.";}}
 function shuffle(a){a=a.slice();for(let i=a.length-1;i;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function board(){document.getElementById("gameScore").textContent=game.score;document.getElementById("gameStreak").textContent=game.streak;document.getElementById("gameProgress").textContent=`${Math.min(game.i,game.list.length)}/${game.list.length}`}
-function startGame(){const pool=allQuestions(),want=Number(document.getElementById("questionCount").value);game={list:shuffle(pool).slice(0,Math.min(want,pool.length)),i:0,score:0,streak:0,answered:false};gameStart.hidden=true;gameResult.hidden=true;gameQuestionWrap.hidden=false;renderQ();board()}
+function startGame(){const pool=allQuestions(),want=Number(document.getElementById("questionCount").value);game={list:shuffle(pool).slice(0,Math.min(want,pool.length)),i:0,score:0,streak:0,answered:false};gameStart.hidden=true;gameResult.hidden=true;gameQuestionWrap.hidden=false;stopGameBtn.hidden=false;renderQ();board()}
+function stopGame(){if(!game||!game.list||game.i>=game.list.length)return;if(!confirm("Bạn có chắc muốn dừng mini game? Tiến độ và điểm hiện tại sẽ không được lưu."))return;stopGameBtn.hidden=true;gameQuestionWrap.hidden=true;gameResult.hidden=true;gameStart.hidden=false;game={list:[],i:0,score:0,streak:0,answered:false};board()}
 function renderQ(){game.answered=false;const q=game.list[game.i];questionTopic.textContent="Câu hỏi ôn tập";questionNumber.textContent=`Câu ${game.i+1}/${game.list.length}`;gameQuestion.textContent=q.q;gameProgressBar.style.width=`${game.i/game.list.length*100}%`;gameAnswers.innerHTML="";shuffle(q.a.map((text,index)=>({text,index}))).forEach(o=>{const b=document.createElement("button");b.className="answer-btn";b.textContent=o.text;b.dataset.index=o.index;b.onclick=()=>answer(b,o.index);gameAnswers.appendChild(b)});gameFeedback.hidden=true;nextQuestionBtn.hidden=true}
 function answer(btn,n){if(game.answered)return;game.answered=true;const q=game.list[game.i],ok=n===q.correct;document.querySelectorAll(".answer-btn").forEach(b=>{b.disabled=true;if(Number(b.dataset.index)===q.correct)b.classList.add("correct")});if(ok){game.streak++;game.score+=100+Math.max(0,game.streak-1)*20}else{game.streak=0;btn.classList.add("wrong")}gameFeedback.hidden=false;gameFeedback.className="game-feedback "+(ok?"good":"bad");gameFeedback.innerHTML=`<b>${ok?"Chính xác!":"Chưa đúng."}</b> ${esc(q.explain||"Không có giải thích.")}`;gameProgressBar.style.width=`${(game.i+1)/game.list.length*100}%`;game.i++;board();nextQuestionBtn.hidden=false;nextQuestionBtn.innerHTML=game.i>=game.list.length?'Xem kết quả <i class="fa-solid fa-flag-checkered"></i>':'Câu tiếp theo <i class="fa-solid fa-arrow-right"></i>'}
-function nextQ(){if(game.i>=game.list.length){gameQuestionWrap.hidden=true;gameResult.hidden=false;finalScore.textContent=game.score;resultTitle.textContent=game.score>=game.list.length*100?"Xuất sắc!":game.score>=game.list.length*60?"Làm tốt lắm!":"Tiếp tục ôn tập nhé!";resultText.textContent="Bạn có thể bổ sung thêm câu hỏi trong Excel và nạp lại bất cứ lúc nào."}else renderQ()}
-importedQuestions=loadImported();updateBankUI();excelInput.addEventListener("change",e=>{if(e.target.files[0])importExcel(e.target.files[0]);e.target.value=""});clearImportedBtn.onclick=()=>{if(confirm("Xóa toàn bộ câu hỏi đã nạp từ Excel trên trình duyệt này?")){importedQuestions=[];saveImported();updateBankUI();importReport.hidden=true}};startGameBtn.onclick=startGame;replayGameBtn.onclick=startGame;nextQuestionBtn.onclick=nextQ;
+function nextQ(){if(game.i>=game.list.length){gameQuestionWrap.hidden=true;gameResult.hidden=false;stopGameBtn.hidden=true;finalScore.textContent=game.score;resultTitle.textContent=game.score>=game.list.length*100?"Xuất sắc!":game.score>=game.list.length*60?"Làm tốt lắm!":"Tiếp tục ôn tập nhé!";resultText.textContent="Bạn có thể bổ sung thêm câu hỏi trong Excel và nạp lại bất cứ lúc nào."}else renderQ()}
+importedQuestions=loadImported();updateBankUI();excelInput.addEventListener("change",e=>{if(e.target.files[0])importExcel(e.target.files[0]);e.target.value=""});clearImportedBtn.onclick=()=>{if(confirm("Xóa toàn bộ câu hỏi đã nạp từ Excel trên trình duyệt này?")){importedQuestions=[];saveImported();updateBankUI();importReport.hidden=true}};startGameBtn.onclick=startGame;replayGameBtn.onclick=startGame;nextQuestionBtn.onclick=nextQ;stopGameBtn.onclick=stopGame;
 
 
 /* Toggle Truy cập nhanh */
@@ -1620,6 +2144,235 @@ if(quickCard&&quickToggle){quickToggle.addEventListener("click",function(e){e.pr
  document.addEventListener("fullscreenchange",function(){if(full)full.innerHTML=document.fullscreenElement?'<i class="fa-solid fa-compress"></i> Thoát toàn màn hình':'<i class="fa-solid fa-expand"></i> Toàn màn hình';});
 })();
 
+
+/* ===== Tech redesign: scroll reveal + cursor spotlight ===== */
+(function(){
+  // Cursor-follow spotlight (đổi biến CSS --mx/--my theo vị trí chuột)
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduceMotion) {
+    window.addEventListener("pointermove", function(e){
+      document.body.style.setProperty("--mx", e.clientX + "px");
+      document.body.style.setProperty("--my", e.clientY + "px");
+    }, { passive: true });
+  }
+
+  // Gắn class reveal cho các khối nội dung chính để tạo hiệu ứng xuất hiện khi cuộn
+  function markReveal(){
+    var targets = document.querySelectorAll(
+      ".card, .stat-row .card, .app, .news-item, .favorite-contact, .hero"
+    );
+    targets.forEach(function(el, i){
+      if (el.classList.contains("reveal")) return;
+      el.classList.add("reveal", "reveal-stagger");
+      el.style.setProperty("--stagger", (i % 8));
+    });
+  }
+  markReveal();
+
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+
+    // Khi chuyển trang (đổi tab menu), gắn reveal cho các thẻ mới xuất hiện
+    var contentRoot = document.querySelector(".main");
+    if (contentRoot && "MutationObserver" in window) {
+      var mo = new MutationObserver(function(){
+        markReveal();
+        document.querySelectorAll(".reveal:not(.in-view)").forEach(function(el){ io.observe(el); });
+      });
+      mo.observe(contentRoot, { attributes: true, attributeFilter: ["class"], subtree: true });
+    }
+  } else {
+    document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("in-view"); });
+  }
+})();
+
 </script>
+
+<script id="animeIframeStyler">
+(function(){
+ const css = `@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Nunito:wght@600;700;800;900&display=swap');
+ @media screen{
+ :root{--bg-color:#fffdf3!important;--surface-color:#fff!important;--text-main:#161616!important;--text-muted:#5d554b!important;--accent-color:#ef3f83!important;--accent-hover:#cc2867!important;--success-color:#22a873!important;--error-color:#e7355f!important;--border-color:#111!important;--ring-color:rgba(255,228,92,.8)!important;--bg1:#fffdf3!important;--bg2:#fff4b8!important;--card:#fff!important;--ink:#111!important;--muted:#5d554b!important;--line:#111!important;--blue:#ef3f83!important;--teal:#24b7be!important;--amber:#ffe45c!important;--shadow:7px 8px 0 #111!important;--r:16px!important}
+ *,body,button,input{font-family:'Nunito','Comic Sans MS',sans-serif!important}body{background-color:#fffdf3!important;background-image:radial-gradient(#111 1.1px,transparent 1.1px)!important;background-size:18px 18px!important;color:#111!important}.pharmaBg{opacity:.12!important}.mesh{display:none!important}
+ h1,h2,h3,.hero h1,.card h2{font-family:'Bangers','Impact',sans-serif!important;letter-spacing:1.3px!important;color:#111!important}.hero h1{font-size:clamp(32px,5vw,58px)!important;text-shadow:3px 3px 0 #ffe45c!important}.hero h3{color:#ef3f83!important}
+ .section,.card,.field,.metric,.lane,.tStep,.results-box{background:#fff!important;border:3px solid #111!important;border-radius:16px!important;box-shadow:7px 8px 0 #111!important}.section:hover,.card:hover{transform:translateY(-3px)!important}.section h2,.card h2{border-bottom:3px solid #111!important;background:#ffe45c!important}
+ input{background:#fffdf7!important;color:#111!important;border:2px solid #111!important;border-radius:10px!important;box-shadow:2px 2px 0 #111!important}input:focus{border-color:#111!important;box-shadow:0 0 0 4px #ffe45c,3px 3px 0 #111!important}
+ .btn,button.btn{background:#ef3f83!important;color:#fff!important;border:3px solid #111!important;border-radius:10px!important;box-shadow:4px 4px 0 #111!important}.btn:hover{transform:translate(-1px,-2px)!important;box-shadow:6px 6px 0 #111!important}.btn.secondary,.tab{background:#ffe45c!important;color:#111!important}.tab.active{background:#7de7ee!important;color:#111!important}.btn-success{background:#22a873!important}.btn-reset{background:#ef3f5f!important}
+ .results-box{background:#c8f3df!important}.result-item strong,.metric span{font-family:'Bangers',sans-serif!important;letter-spacing:1px}.timeBadge,.tag,.finish{border:2px solid #111!important;box-shadow:2px 2px 0 #111!important}.tag{background:#ead8ff!important;color:#4c1d95!important}.num{background:#ef3f83!important;border:3px solid #111!important}.parallel .num{background:#ffe45c!important;color:#111!important}
+ header{background:#ffe45c!important;border-bottom:3px solid #111!important;box-shadow:0 5px 0 #111!important}.footerAuthor{color:#111!important;font-weight:800}
+ }
+ @media print{body,button,input{font-family:Arial,sans-serif!important}}
+ `;
+ function apply(frame){try{const d=frame.contentDocument;if(!d||d.getElementById('animeInjected'))return;const s=d.createElement('style');s.id='animeInjected';s.textContent=css;d.head.appendChild(s);}catch(e){}}
+ document.querySelectorAll('iframe.ipc-tool-frame').forEach(f=>{f.addEventListener('load',()=>apply(f));setTimeout(()=>apply(f),100);setTimeout(()=>apply(f),800);});
+})();
+</script>
+
+<script id="animeMobileV3">
+(function(){
+ /* Synchronize embedded tools with the neutral dark palette, preserving their logic. */
+ const extra=`@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Mali:wght@400;500;600;700&display=swap&subset=vietnamese');
+ @media screen{html,body,button,input,select{font-family:'Mali','Segoe UI',sans-serif!important;font-synthesis:none!important}h1,h2,h3,.hero h1,.card h2{font-family:'Coiny','Mali',sans-serif!important;font-weight:400!important;line-height:1.35!important}html{-webkit-text-size-adjust:100%;overflow-x:hidden}body{overflow-x:hidden!important}input,button,select{font-size:16px!important;max-width:100%}table{max-width:100%}@media(max-width:640px){body{padding:18px 10px!important}.container,.wrap{width:100%!important;max-width:100%!important;padding:10px!important}.hero h1{font-size:clamp(26px,9vw,40px)!important}.section,.card{padding:16px!important}.form-group{display:block!important}.form-group label{width:auto!important;margin-bottom:6px!important}.data-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}.results-grid,.summary{grid-template-columns:1fr!important}.layout{grid-template-columns:1fr!important}.tableWrap{overflow-x:auto!important;-webkit-overflow-scrolling:touch}.tStep{grid-template-columns:38px 1fr!important}.timeBadge,.taskBlock{grid-column:2!important;min-width:0!important;width:100%!important;white-space:normal!important}}}
+ body.anime-dark{--bg-color:#111210!important;--surface-color:#1d1f1b!important;--text-main:#f1eee4!important;--text-muted:#c7c2b4!important;--border-color:#8d897d!important;--bg1:#111210!important;--bg2:#181a16!important;--card:#1d1f1b!important;--ink:#f1eee4!important;--muted:#c7c2b4!important;--line:#8d897d!important;--blue:#e04b32!important;--teal:#d59a18!important;--amber:#d59a18!important;background:#111210!important;background-image:radial-gradient(rgba(235,228,207,.11) 1px,transparent 1px)!important;background-size:20px 20px!important;color:#f1eee4!important}body.anime-dark .section,body.anime-dark .card,body.anime-dark .field,body.anime-dark .metric,body.anime-dark .lane,body.anime-dark .tStep{background:#1d1f1b!important;color:#f1eee4!important;border-color:#8d897d!important;box-shadow:7px 8px 0 #070806!important}body.anime-dark input{background:#151713!important;color:#f1eee4!important;border-color:#8d897d!important}body.anime-dark header,body.anime-dark .section h2,body.anime-dark .card h2{background:#282a23!important;color:#fffdf5!important;border-color:#8d897d!important}`;
+ function sync(f){try{const d=f.contentDocument;if(!d)return;let s=d.getElementById('animeMobileFrameV3');if(!s){s=d.createElement('style');s.id='animeMobileFrameV3';s.textContent=extra;d.head.appendChild(s)}d.body.classList.toggle('anime-dark',!document.body.classList.contains('light'));}catch(e){}}
+ const fs=[...document.querySelectorAll('iframe.ipc-tool-frame')];fs.forEach(f=>{f.addEventListener('load',()=>sync(f));setTimeout(()=>sync(f),200)});new MutationObserver(()=>fs.forEach(sync)).observe(document.body,{attributes:true,attributeFilter:['class']});
+})();
+</script>
+
+<script id="animeV4FrameReadability">
+(function(){
+ const css=`@import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&family=Paytone+One&display=swap&subset=vietnamese');
+ @media screen{html,body,button,input,select{font-family:'Mali','Segoe UI',sans-serif!important;font-synthesis:none!important;text-shadow:none!important}h1,h2,h3,.hero h1,.card h2{font-family:'Paytone One','Mali',sans-serif!important;font-weight:400!important;letter-spacing:0!important;line-height:1.4!important;text-shadow:none!important;-webkit-text-stroke:0!important}.section,.card{box-shadow:4px 5px 0 #111!important}body.anime-dark .section,body.anime-dark .card{box-shadow:4px 5px 0 #070806!important}@media(max-width:640px){h1,.hero h1{font-size:clamp(23px,8vw,34px)!important;line-height:1.45!important}}}`;
+ function apply(f){try{const d=f.contentDocument;if(!d||d.getElementById('animeV4FrameStyle'))return;const st=d.createElement('style');st.id='animeV4FrameStyle';st.textContent=css;d.head.appendChild(st)}catch(e){}}
+ document.querySelectorAll('iframe.ipc-tool-frame').forEach(f=>{f.addEventListener('load',()=>apply(f));setTimeout(()=>apply(f),200)});
+})();
+</script>
+
+<script id="animeV5Features">
+(function(){
+ 'use strict';
+ /* Mobile drawer: large touch targets, overlay, Escape and automatic close after navigation. */
+ const topbar=document.querySelector('.topbar'), sidebar=document.querySelector('.sidebar');
+ if(topbar&&sidebar&&!document.getElementById('mobileMenuBtn')){
+  const btn=document.createElement('button');btn.id='mobileMenuBtn';btn.className='mobile-menu-btn';btn.type='button';btn.setAttribute('aria-label','Mở menu');btn.setAttribute('aria-expanded','false');btn.innerHTML='<i class="fa-solid fa-bars"></i>';topbar.prepend(btn);
+  const close=document.createElement('button');close.className='mobile-nav-close';close.type='button';close.setAttribute('aria-label','Đóng menu');close.innerHTML='<i class="fa-solid fa-xmark"></i>';sidebar.prepend(close);
+  const ov=document.createElement('div');ov.className='mobile-nav-overlay';document.body.appendChild(ov);
+  const setOpen=(open)=>{sidebar.classList.toggle('mobile-open',open);ov.classList.toggle('open',open);document.body.classList.toggle('mobile-nav-lock',open);btn.setAttribute('aria-expanded',String(open));};
+  btn.addEventListener('click',()=>setOpen(!sidebar.classList.contains('mobile-open')));close.addEventListener('click',()=>setOpen(false));ov.addEventListener('click',()=>setOpen(false));document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false)});
+  sidebar.querySelectorAll('a:not(.dropdown-toggle)').forEach(a=>a.addEventListener('click',()=>{if(innerWidth<=900)setOpen(false)}));
+  addEventListener('resize',()=>{if(innerWidth>900)setOpen(false)});
+ }
+
+ const toolCss=`@import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&family=Paytone+One&display=swap&subset=vietnamese');
+ @media screen{html,body,button,input,select{font-family:'Mali','Segoe UI',sans-serif!important}h1,h2,h3,.hero h1,.card h2{font-family:'Paytone One','Mali',sans-serif!important;font-weight:400!important}.ipc-local-theme{position:fixed;right:12px;top:12px;z-index:10000;border:2px solid #111;border-radius:10px;padding:9px 12px;background:#ffe66d;color:#111;box-shadow:3px 3px 0 #111;font:700 13px 'Mali',sans-serif;cursor:pointer}.ipc-light{--bg-color:#fffaf0!important;--surface-color:#fffef9!important;--text-main:#211d19!important;--text-muted:#625a50!important;--border-color:#25211d!important;--bg1:#fffaf0!important;--bg2:#fff3bd!important;--card:#fffef9!important;--ink:#211d19!important;--muted:#625a50!important;--line:#25211d!important;background:#fffaf0!important;color:#211d19!important}.ipc-dark{--bg-color:#111210!important;--surface-color:#1d1f1b!important;--text-main:#f1eee4!important;--text-muted:#c7c2b4!important;--border-color:#8d897d!important;--bg1:#111210!important;--bg2:#181a16!important;--card:#1d1f1b!important;--ink:#f1eee4!important;--muted:#c7c2b4!important;--line:#8d897d!important;background:#111210!important;color:#f1eee4!important}.ipc-dark .section,.ipc-dark .card,.ipc-dark .field,.ipc-dark .metric,.ipc-dark .lane,.ipc-dark .tStep{background:#1d1f1b!important;color:#f1eee4!important;border-color:#8d897d!important;box-shadow:4px 5px 0 #070806!important}.ipc-dark input{background:#151713!important;color:#f1eee4!important;border-color:#8d897d!important}.ipc-dark header,.ipc-dark .section h2,.ipc-dark .card h2{background:#282a23!important;color:#fffdf5!important;border-color:#8d897d!important}.ipc-dark .ipc-local-theme{background:#3b3528;color:#fffdf5;border-color:#d59a18;box-shadow:3px 3px 0 #070806}.ipc-light.anime-dark{background:#fffaf0!important;color:#211d19!important}.ipc-light.anime-dark .section,.ipc-light.anime-dark .card,.ipc-light.anime-dark .field,.ipc-light.anime-dark .metric,.ipc-light.anime-dark .lane,.ipc-light.anime-dark .tStep{background:#fffef9!important;color:#211d19!important;border-color:#25211d!important;box-shadow:4px 5px 0 #111!important}.ipc-light.anime-dark input{background:#fff!important;color:#211d19!important;border-color:#25211d!important}@media(max-width:640px){.ipc-local-theme{position:sticky;float:right;top:8px;right:8px;margin:8px}body{padding-top:10px!important}}}`;
+ function setupTool(frame,key){try{const d=frame.contentDocument;if(!d||d.getElementById('ipcIndependentTheme'))return;const st=d.createElement('style');st.id='ipcIndependentTheme';st.textContent=toolCss;d.head.appendChild(st);const b=d.createElement('button');b.className='ipc-local-theme';b.type='button';let dark=localStorage.getItem(key)==='dark';const paint=()=>{d.body.classList.toggle('ipc-dark',dark);d.body.classList.toggle('ipc-light',!dark);b.innerHTML=dark?'☀ Chế độ sáng':'☾ Chế độ tối';b.setAttribute('aria-label',b.textContent);};b.addEventListener('click',()=>{dark=!dark;localStorage.setItem(key,dark?'dark':'light');paint()});d.body.prepend(b);paint();}catch(e){}}
+ document.querySelectorAll('iframe.ipc-tool-frame').forEach((f,i)=>{f.addEventListener('load',()=>setupTool(f,'ipcToolTheme'+i));setTimeout(()=>setupTool(f,'ipcToolTheme'+i),250)});
+
+ /* Manga directory injected inside srcdoc iframe, including responsive cards. */
+ const dir=document.querySelector('iframe.directory-frame');
+ const dirCss=`@import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&family=Paytone+One&display=swap&subset=vietnamese');
+ *{font-family:'Mali','Segoe UI',sans-serif!important;box-sizing:border-box}body{background-color:#fffaf0!important;background-image:radial-gradient(#393127 1.1px,transparent 1.1px)!important;background-size:18px 18px!important;padding:18px!important;animation:none!important;color:#211d19!important}.container{background:#fffef9!important;border:3px solid #25211d!important;border-radius:18px!important;box-shadow:7px 8px 0 #25211d!important;backdrop-filter:none!important;max-width:1200px!important}.container::before{content:'PHONE BOOK!';display:inline-block;font:400 15px 'Paytone One',sans-serif;background:#ffe66d;border:3px solid #25211d;border-radius:9px;padding:5px 10px;box-shadow:3px 3px 0 #25211d;transform:rotate(-2deg);margin-bottom:10px}h1,h2,h3,.title{font-family:'Paytone One','Mali',sans-serif!important;font-weight:400!important;text-shadow:none!important;color:#211d19!important}input,select,button{border:2px solid #25211d!important;border-radius:10px!important;box-shadow:2px 2px 0 #25211d!important;font-size:16px!important}.card,.contact-card,.department,.dept-card,.contact-item,.item,tr{border-color:#25211d!important}.contact-card,.dept-card,.department,.contact-item,.item{background:#fff!important;border:2px solid #25211d!important;border-radius:13px!important;box-shadow:3px 3px 0 #25211d!important;transition:.16s}.contact-card:hover,.dept-card:hover,.department:hover,.contact-item:hover,.item:hover{background:#fff0a8!important;transform:translateY(-2px)!important}.phone,.extension,.ext,.number{color:#b13627!important;font-weight:700!important}.badge,.tag{background:#96e1e7!important;color:#111!important;border:2px solid #25211d!important}.directory-theme-chip{position:fixed;right:12px;bottom:12px;z-index:9999;border:2px solid #25211d;border-radius:10px;background:#ffe66d;color:#111;padding:9px 12px;box-shadow:3px 3px 0 #25211d;font-weight:700}.dir-dark{background-color:#111210!important;background-image:radial-gradient(rgba(235,228,207,.11) 1px,transparent 1px)!important;color:#f1eee4!important}.dir-dark .container{background:#1d1f1b!important;color:#f1eee4!important;border-color:#8d897d!important;box-shadow:6px 7px 0 #070806!important}.dir-dark h1,.dir-dark h2,.dir-dark h3,.dir-dark .title{color:#fffdf5!important}.dir-dark .contact-card,.dir-dark .dept-card,.dir-dark .department,.dir-dark .contact-item,.dir-dark .item{background:#272a24!important;color:#f1eee4!important;border-color:#8d897d!important;box-shadow:3px 3px 0 #070806!important}.dir-dark .contact-card:hover,.dir-dark .dept-card:hover,.dir-dark .department:hover,.dir-dark .contact-item:hover,.dir-dark .item:hover{background:#443a1d!important}.dir-dark input,.dir-dark select{background:#151713!important;color:#f1eee4!important;border-color:#8d897d!important}.dir-dark .directory-theme-chip{background:#3b3528;color:#fffdf5;border-color:#d59a18;box-shadow:3px 3px 0 #070806}@media(max-width:650px){body{padding:8px!important}.container{padding:14px!important;box-shadow:4px 5px 0 #25211d!important}h1{font-size:clamp(24px,8vw,34px)!important}.grid,.contacts-grid,.departments-grid{grid-template-columns:1fr!important}.directory-theme-chip{position:sticky;float:right;bottom:auto;top:8px}}`;
+ function setupDir(){try{const d=dir.contentDocument;if(!d||d.getElementById('directoryMangaV5'))return;const st=d.createElement('style');st.id='directoryMangaV5';st.textContent=dirCss;d.head.appendChild(st);const b=d.createElement('button');b.className='directory-theme-chip';b.type='button';let dark=localStorage.getItem('directoryTheme')==='dark';const paint=()=>{d.body.classList.toggle('dir-dark',dark);b.textContent=dark?'☀ Sáng':'☾ Tối'};b.onclick=()=>{dark=!dark;localStorage.setItem('directoryTheme',dark?'dark':'light');paint()};d.body.prepend(b);paint();}catch(e){}}
+ if(dir){dir.addEventListener('load',setupDir);setTimeout(setupDir,300)}
+})();
+</script>
+
+<!-- ===== HIDDEN IPC GAMES: unlock through assistant chat ===== -->
+<style id="ipcHiddenGamesStyle">
+@media screen {
+.ipc-game-overlay{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(3,5,12,.84);backdrop-filter:blur(8px)}
+.ipc-game-overlay.open{display:flex}.ipc-game-shell{width:min(96vw,760px);max-height:94vh;overflow:auto;background:var(--panel,#fff);color:var(--text,#111);border:3px solid var(--border,#111);border-radius:20px;box-shadow:8px 9px 0 #05060b;padding:18px}
+.ipc-game-head{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:3px solid var(--border,#111);padding-bottom:12px;margin-bottom:15px}.ipc-game-head h2{font-family:'Paytone One','Mali',sans-serif!important;font-size:24px;margin:0}.ipc-game-actions{display:flex;gap:8px;flex-wrap:wrap}.ipc-game-action{border:2px solid var(--border,#111);border-radius:10px;background:var(--accent,#ef3f83);color:#fff;padding:8px 12px;font:700 14px 'Mali',sans-serif;cursor:pointer;box-shadow:3px 3px 0 #111}.ipc-game-action.close{background:#ef4444}.ipc-game-action:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 #111}.ipc-game-help{font-size:13px;color:var(--muted,#555);line-height:1.5;margin:8px 0 14px}.ipc-game-status{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}.ipc-game-pill{background:var(--panel-2,#f4f4f4);border:2px solid var(--border,#111);border-radius:10px;padding:7px 12px;font-weight:800}
+/* 2048 */
+.ipc-2048-board{width:min(88vw,460px);aspect-ratio:1;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:9px;padding:9px;background:#30405f;border:3px solid #111;border-radius:16px;box-shadow:5px 5px 0 #111;touch-action:none}.ipc-2048-cell{display:flex;align-items:center;justify-content:center;border-radius:10px;background:#435170;color:#fff;font:900 clamp(20px,5vw,34px) 'Mali',sans-serif;min-width:0}.ipc-2048-cell[data-v="2"]{background:#dff8ff;color:#172033}.ipc-2048-cell[data-v="4"]{background:#bcefff;color:#172033}.ipc-2048-cell[data-v="8"]{background:#ffe66d;color:#172033}.ipc-2048-cell[data-v="16"]{background:#ffb85c;color:#172033}.ipc-2048-cell[data-v="32"]{background:#ff7aa8}.ipc-2048-cell[data-v="64"]{background:#ef3f83}.ipc-2048-cell[data-v="128"]{background:#9b7bff}.ipc-2048-cell[data-v="256"]{background:#7657df}.ipc-2048-cell[data-v="512"]{background:#22b8b3}.ipc-2048-cell[data-v="1024"]{background:#138b88}.ipc-2048-cell[data-v="2048"]{background:#111;color:#ffe66d;box-shadow:inset 0 0 0 3px #ffe66d}
+/* Caro */
+.ipc-caro-wrap{overflow:auto;padding:4px}.ipc-caro-board{display:grid;grid-template-columns:repeat(15,34px);width:max-content;margin:auto;background:#f4dfad;border:3px solid #111;box-shadow:5px 5px 0 #111}.ipc-caro-cell{width:34px;height:34px;border:1px solid #8b6f40;background:#fff4cf;color:#111;font:900 22px/1 'Mali',sans-serif;cursor:pointer}.ipc-caro-cell.x{color:#e33474}.ipc-caro-cell.o{color:#117d92}.ipc-caro-cell.win{background:#ffe66d!important;animation:ipcWinPulse .65s ease infinite alternate}@keyframes ipcWinPulse{to{transform:scale(.9)}}
+.ipc-secret-hint{margin-top:12px;text-align:center;color:var(--muted,#666);font-size:12px}.ipc-game-toast{position:fixed;left:50%;bottom:24px;z-index:10010;transform:translate(-50%,120px);opacity:0;background:#111827;color:#fff;border:2px solid #fff;border-radius:12px;padding:10px 16px;font-weight:700;transition:.25s}.ipc-game-toast.show{transform:translate(-50%,0);opacity:1}
+body:not(.light) .ipc-game-shell{box-shadow:8px 9px 0 #03040a}body:not(.light) .ipc-game-action{box-shadow:3px 3px 0 #03040a}body:not(.light) .ipc-game-pill{background:#20243a}body:not(.light) .ipc-2048-board,body:not(.light) .ipc-caro-board{border-color:#94a3c5;box-shadow:5px 5px 0 #03040a}
+@media(max-width:600px){.ipc-game-overlay{padding:7px}.ipc-game-shell{padding:12px;border-radius:14px}.ipc-game-head{align-items:flex-start}.ipc-game-head h2{font-size:20px}.ipc-game-action{padding:7px 9px}.ipc-2048-board{gap:6px;padding:6px}.ipc-caro-board{grid-template-columns:repeat(15,30px)}.ipc-caro-cell{width:30px;height:30px;font-size:19px}}
+}
+</style>
+
+<div class="ipc-game-overlay" id="ipc2048Overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="ipc2048Title">
+ <section class="ipc-game-shell">
+  <div class="ipc-game-head"><h2 id="ipc2048Title">🎮 2048 IPC</h2><div class="ipc-game-actions"><button class="ipc-game-action" id="ipc2048Reset" type="button">Chơi mới</button><button class="ipc-game-action close" data-close-game="ipc2048Overlay" type="button">Đóng</button></div></div>
+  <div class="ipc-game-status"><span class="ipc-game-pill">Điểm: <b id="ipc2048Score">0</b></span><span class="ipc-game-pill">Kỷ lục: <b id="ipc2048Best">0</b></span></div>
+  <p class="ipc-game-help">Dùng phím mũi tên, W A S D hoặc vuốt trên bàn chơi để ghép các ô giống nhau.</p>
+  <div class="ipc-2048-board" id="ipc2048Board" aria-label="Bàn chơi 2048"></div>
+  <p class="ipc-secret-hint">Mẹo: nhấn Esc để đóng nhanh.</p>
+ </section>
+</div>
+
+<div class="ipc-game-overlay" id="ipcCaroOverlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="ipcCaroTitle">
+ <section class="ipc-game-shell">
+  <div class="ipc-game-head"><h2 id="ipcCaroTitle">⭕ Caro IPC</h2><div class="ipc-game-actions"><button class="ipc-game-action" id="ipcCaroReset" type="button">Ván mới</button><button class="ipc-game-action close" data-close-game="ipcCaroOverlay" type="button">Đóng</button></div></div>
+  <div class="ipc-game-status"><span class="ipc-game-pill" id="ipcCaroTurn">Lượt: X</span><span class="ipc-game-pill">X: <b id="ipcCaroXScore">0</b></span><span class="ipc-game-pill">O: <b id="ipcCaroOScore">0</b></span></div>
+  <p class="ipc-game-help">Hai người chơi luân phiên trên cùng thiết bị. Người đầu tiên tạo đủ 5 quân liên tiếp theo hàng, cột hoặc đường chéo sẽ thắng.</p>
+  <div class="ipc-caro-wrap"><div class="ipc-caro-board" id="ipcCaroBoard" aria-label="Bàn cờ Caro 15 x 15"></div></div>
+  <p class="ipc-secret-hint">Mẹo: nhấn Esc để đóng nhanh.</p>
+ </section>
+</div>
+<div class="ipc-game-toast" id="ipcGameToast" role="status" aria-live="polite"></div>
+
+<script id="ipcHiddenGamesScript">
+(function(){
+'use strict';
+const $=id=>document.getElementById(id);
+const toast=(msg)=>{const el=$('ipcGameToast');if(!el)return;el.textContent=msg;el.classList.add('show');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('show'),2200)};
+function openGame(id){const el=$(id);if(!el)return;el.classList.add('open');el.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';if(id==='ipc2048Overlay'&&!game2048.ready)init2048();if(id==='ipcCaroOverlay'&&!caro.ready)initCaro();setTimeout(()=>el.querySelector('button')?.focus(),0)}
+function closeGame(id){const el=$(id);if(!el)return;el.classList.remove('open');el.setAttribute('aria-hidden','true');if(!document.querySelector('.ipc-game-overlay.open'))document.body.style.overflow=''}
+window.addEventListener('ipc-open-secret-game',e=>openGame(e.detail));
+document.querySelectorAll('[data-close-game]').forEach(b=>b.addEventListener('click',()=>closeGame(b.dataset.closeGame)));
+document.querySelectorAll('.ipc-game-overlay').forEach(o=>o.addEventListener('mousedown',e=>{if(e.target===o)closeGame(o.id)}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.ipc-game-overlay.open').forEach(o=>closeGame(o.id))});
+
+/* Chat command hook. Codes are case-insensitive and spaces are ignored. */
+const normalize=s=>(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,'').toUpperCase();
+function checkSecretCommand(raw){const code=normalize(raw);if(['IPC2048','2048IPC','GAME2048'].includes(code)){openGame('ipc2048Overlay');toast('Đã mở trò chơi bí mật 2048');return true}if(['IPCCARO','CAROIPC','GAMECARO'].includes(code)){openGame('ipcCaroOverlay');toast('Đã mở trò chơi bí mật Caro');return true}return false}
+function hookChat(){ /* Secret codes are handled directly in sendMsg() to avoid listener-order conflicts. */ }
+
+/* 2048 */
+const game2048={board:[],score:0,best:Number(localStorage.getItem('ipc2048Best')||0),ready:false,over:false};
+function empty2048(){return Array.from({length:4},()=>Array(4).fill(0))}
+function add2048(){const free=[];game2048.board.forEach((r,y)=>r.forEach((v,x)=>{if(!v)free.push([y,x])}));if(!free.length)return;const [y,x]=free[Math.floor(Math.random()*free.length)];game2048.board[y][x]=Math.random()<.9?2:4}
+function init2048(){game2048.board=empty2048();game2048.score=0;game2048.over=false;game2048.ready=true;add2048();add2048();render2048()}
+function render2048(){const b=$('ipc2048Board');if(!b)return;b.innerHTML='';game2048.board.flat().forEach(v=>{const c=document.createElement('div');c.className='ipc-2048-cell';c.dataset.v=String(v);c.textContent=v||'';b.appendChild(c)});$('ipc2048Score').textContent=game2048.score;$('ipc2048Best').textContent=game2048.best}
+function slideLine(line){const a=line.filter(Boolean),out=[];let gained=0;for(let i=0;i<a.length;i++){if(a[i]===a[i+1]){out.push(a[i]*2);gained+=a[i]*2;i++}else out.push(a[i])}while(out.length<4)out.push(0);return [out,gained]}
+function rotateBoard(b){return b[0].map((_,i)=>b.map(r=>r[i]).reverse())}
+function move2048(dir){if(game2048.over)return;let b=game2048.board.map(r=>r.slice()),rot={left:0,down:1,right:2,up:3}[dir];for(let i=0;i<rot;i++)b=rotateBoard(b);let gained=0;b=b.map(r=>{const z=slideLine(r);gained+=z[1];return z[0]});for(let i=rot;i<4;i++)b=rotateBoard(b);if(JSON.stringify(b)===JSON.stringify(game2048.board))return;game2048.board=b;game2048.score+=gained;if(game2048.score>game2048.best){game2048.best=game2048.score;localStorage.setItem('ipc2048Best',String(game2048.best))}add2048();render2048();if(!canMove2048()){game2048.over=true;setTimeout(()=>toast('Hết nước đi. Điểm của bạn: '+game2048.score),100)}}
+function canMove2048(){for(let y=0;y<4;y++)for(let x=0;x<4;x++){if(!game2048.board[y][x])return true;if(x<3&&game2048.board[y][x]===game2048.board[y][x+1])return true;if(y<3&&game2048.board[y][x]===game2048.board[y+1][x])return true}return false}
+document.addEventListener('keydown',e=>{if(!$('ipc2048Overlay')?.classList.contains('open'))return;const map={ArrowLeft:'left',a:'left',A:'left',ArrowRight:'right',d:'right',D:'right',ArrowUp:'up',w:'up',W:'up',ArrowDown:'down',s:'down',S:'down'};if(map[e.key]){e.preventDefault();move2048(map[e.key])}});
+let touchStart=null;$('ipc2048Board')?.addEventListener('touchstart',e=>{const t=e.changedTouches[0];touchStart=[t.clientX,t.clientY]},{passive:true});$('ipc2048Board')?.addEventListener('touchend',e=>{if(!touchStart)return;const t=e.changedTouches[0],dx=t.clientX-touchStart[0],dy=t.clientY-touchStart[1];touchStart=null;if(Math.max(Math.abs(dx),Math.abs(dy))<25)return;move2048(Math.abs(dx)>Math.abs(dy)?(dx>0?'right':'left'):(dy>0?'down':'up'))},{passive:true});$('ipc2048Reset')?.addEventListener('click',init2048);
+
+/* Caro 15x15, local two-player, first exact/extended line of 5 wins */
+const caro={size:15,cells:[],turn:'X',winner:'',ready:false,scores:{X:Number(localStorage.getItem('ipcCaroX')||0),O:Number(localStorage.getItem('ipcCaroO')||0)}};
+function initCaro(){caro.cells=Array(caro.size*caro.size).fill('');caro.turn='X';caro.winner='';caro.ready=true;renderCaro()}
+function renderCaro(){const b=$('ipcCaroBoard');if(!b)return;b.innerHTML='';caro.cells.forEach((v,i)=>{const c=document.createElement('button');c.type='button';c.className='ipc-caro-cell '+(v?v.toLowerCase():'');c.textContent=v;c.setAttribute('aria-label','Ô '+(Math.floor(i/caro.size)+1)+', '+(i%caro.size+1)+(v?', '+v:''));c.addEventListener('click',()=>playCaro(i));b.appendChild(c)});$('ipcCaroTurn').textContent=caro.winner?'Kết quả: '+caro.winner+' thắng':'Lượt: '+caro.turn;$('ipcCaroXScore').textContent=caro.scores.X;$('ipcCaroOScore').textContent=caro.scores.O}
+function playCaro(i){if(caro.winner||caro.cells[i])return;caro.cells[i]=caro.turn;const win=checkCaro(i,caro.turn);renderCaro();if(win.length){caro.winner=caro.turn;caro.scores[caro.turn]++;localStorage.setItem('ipcCaro'+caro.turn,String(caro.scores[caro.turn]));$('ipcCaroTurn').textContent='Kết quả: '+caro.turn+' thắng';win.forEach(j=>$('ipcCaroBoard').children[j]?.classList.add('win'));toast('Người chơi '+caro.turn+' chiến thắng!');return}if(caro.cells.every(Boolean)){caro.winner='Hòa';$('ipcCaroTurn').textContent='Kết quả: Hòa';toast('Ván đấu hòa')}else{caro.turn=caro.turn==='X'?'O':'X';$('ipcCaroTurn').textContent='Lượt: '+caro.turn}}
+function checkCaro(index,p){const y=Math.floor(index/caro.size),x=index%caro.size,dirs=[[1,0],[0,1],[1,1],[1,-1]];for(const [dx,dy] of dirs){const line=[index];for(const s of [-1,1]){let nx=x+dx*s,ny=y+dy*s;while(nx>=0&&nx<caro.size&&ny>=0&&ny<caro.size&&caro.cells[ny*caro.size+nx]===p){line.push(ny*caro.size+nx);nx+=dx*s;ny+=dy*s}}if(line.length>=5)return line}return []}
+$('ipcCaroReset')?.addEventListener('click',initCaro);
+})();
+</script>
+
+
+<style id="ipcSudokuStyle">
+.ipc-sudoku-board{display:grid;grid-template-columns:repeat(9,minmax(32px,48px));width:max-content;margin:auto;border:3px solid #111;background:#111;gap:1px;box-shadow:5px 5px 0 #111}.ipc-sudoku-cell{width:clamp(32px,8vw,48px);height:clamp(32px,8vw,48px);border:0;background:#fff9df;color:#172033;text-align:center;font:800 clamp(17px,4vw,24px) 'Mali',sans-serif;outline:none}.ipc-sudoku-cell:nth-child(3n){border-right:2px solid #111}.ipc-sudoku-cell:nth-child(9n){border-right:0}.ipc-sudoku-cell.box-bottom{border-bottom:2px solid #111}.ipc-sudoku-cell.given{background:#dff6ff;color:#26324a;font-weight:900}.ipc-sudoku-cell.invalid{background:#ffd7e5!important;color:#9f1239!important}.ipc-sudoku-cell.selected{box-shadow:inset 0 0 0 3px #ef3f83}.ipc-sudoku-pad{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;max-width:460px;margin:14px auto 0}.ipc-sudoku-num{border:2px solid var(--border,#111);border-radius:9px;background:var(--panel-2,#eef5ff);color:var(--text,#111);padding:9px;font-weight:900;cursor:pointer}.ipc-sudoku-num.erase{grid-column:span 2;background:#ef4444;color:#fff}body:not(.light) .ipc-sudoku-cell{background:#20243a;color:#fff;border-color:#7d88aa}body:not(.light) .ipc-sudoku-cell.given{background:#243b55;color:#7ee7ff}.ipc-sudoku-complete{text-align:center;font-weight:900;color:#16a34a;margin-top:10px;min-height:24px}
+</style>
+<div class="ipc-game-overlay" id="ipcSudokuOverlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="ipcSudokuTitle">
+ <section class="ipc-game-shell">
+  <div class="ipc-game-head"><h2 id="ipcSudokuTitle">🧩 Sudoku IPC</h2><div class="ipc-game-actions"><button class="ipc-game-action" id="ipcSudokuNew" type="button">Ván mới</button><button class="ipc-game-action" id="ipcSudokuCheck" type="button">Kiểm tra</button><button class="ipc-game-action close" data-close-game="ipcSudokuOverlay" type="button">Đóng</button></div></div>
+  <div class="ipc-game-status"><span class="ipc-game-pill">Lỗi: <b id="ipcSudokuErrors">0</b></span><span class="ipc-game-pill">Ô còn lại: <b id="ipcSudokuRemaining">0</b></span></div>
+  <p class="ipc-game-help">Điền các số từ 1 đến 9 sao cho mỗi hàng, mỗi cột và mỗi khối 3 × 3 không lặp số. Chọn ô rồi dùng bàn phím hoặc nút số.</p>
+  <div class="ipc-sudoku-board" id="ipcSudokuBoard" aria-label="Bàn Sudoku 9 x 9"></div>
+  <div class="ipc-sudoku-pad" id="ipcSudokuPad"></div><div class="ipc-sudoku-complete" id="ipcSudokuMessage"></div>
+ </section>
+</div>
+<script id="ipcSudokuScript">
+(function(){
+'use strict';
+var puzzles=[
+['530070000600195000098000060800060003400803001700020006060000280000419005000080079','534678912672195348198342567859761423426853791713924856961537284287419635345286179'],
+['000260701680070090190004500820100040004602900050003028009300074040050036703018000','435269781682571493197834562826195347374682915951743628519326874248957136763418259'],
+['300000000005009000200504000020000700160000058704310600000890100000067080000005437','349176825815239746276584319923658741167942358754319692532897164491763582688425437']];
+var state={puzzle:'',solution:'',values:[],selected:-1,errors:0,ready:false};
+function byId(id){return document.getElementById(id)}
+function newGame(){var pair=puzzles[Math.floor(Math.random()*puzzles.length)];state.puzzle=pair[0];state.solution=pair[1];state.values=pair[0].split('');state.selected=-1;state.errors=0;state.ready=true;byId('ipcSudokuMessage').textContent='';render()}
+function render(){var board=byId('ipcSudokuBoard');if(!board)return;board.innerHTML='';state.values.forEach(function(v,i){var input=document.createElement('button');input.type='button';input.className='ipc-sudoku-cell'+(state.puzzle[i]!=='0'?' given':'')+(Math.floor(i/9)%3===2&&Math.floor(i/9)!==8?' box-bottom':'')+(i===state.selected?' selected':'');input.textContent=v==='0'?'':v;input.disabled=state.puzzle[i]!=='0';input.setAttribute('aria-label','Hàng '+(Math.floor(i/9)+1)+', cột '+(i%9+1));input.addEventListener('click',function(){state.selected=i;render()});board.appendChild(input)});byId('ipcSudokuErrors').textContent=state.errors;byId('ipcSudokuRemaining').textContent=state.values.filter(function(v){return v==='0'}).length}
+function put(n){if(state.selected<0||state.puzzle[state.selected]!=='0')return;var cell=state.selected;if(n==='0'){state.values[cell]='0';render();return}state.values[cell]=n;if(state.solution[cell]!==n){state.errors++;render();var el=byId('ipcSudokuBoard').children[cell];el.classList.add('invalid');setTimeout(function(){el.classList.remove('invalid')},550)}else{render();if(state.values.join('')===state.solution)byId('ipcSudokuMessage').textContent='Hoàn thành xuất sắc! 🎉'}}
+function check(){if(state.values.join('')===state.solution){byId('ipcSudokuMessage').textContent='Sudoku chính xác hoàn toàn! 🎉';return}var wrong=0;state.values.forEach(function(v,i){if(v!=='0'&&v!==state.solution[i]){wrong++;byId('ipcSudokuBoard').children[i].classList.add('invalid')}});byId('ipcSudokuMessage').textContent=wrong?'Có '+wrong+' ô chưa đúng.':'Các ô đã nhập đều đúng, tiếp tục nhé!'}
+var pad=byId('ipcSudokuPad');for(var n=1;n<=9;n++){(function(x){var b=document.createElement('button');b.type='button';b.className='ipc-sudoku-num';b.textContent=x;b.addEventListener('click',function(){put(String(x))});pad.appendChild(b)})(n)}var erase=document.createElement('button');erase.type='button';erase.className='ipc-sudoku-num erase';erase.textContent='Xóa ô';erase.addEventListener('click',function(){put('0')});pad.appendChild(erase);
+document.addEventListener('keydown',function(e){if(!byId('ipcSudokuOverlay').classList.contains('open'))return;if(/^[1-9]$/.test(e.key))put(e.key);else if(e.key==='Backspace'||e.key==='Delete'||e.key==='0')put('0')});
+byId('ipcSudokuNew').addEventListener('click',newGame);byId('ipcSudokuCheck').addEventListener('click',check);byId('ipcSudokuOverlay').querySelector('[data-close-game]').addEventListener('click',function(){byId('ipcSudokuOverlay').classList.remove('open');byId('ipcSudokuOverlay').setAttribute('aria-hidden','true');document.body.style.overflow=''});window.addEventListener('ipc-open-secret-game',function(e){if(e.detail==='ipcSudokuOverlay'&&!state.ready)newGame()});
+})();
+</script>
+
 </body>
 </html>
